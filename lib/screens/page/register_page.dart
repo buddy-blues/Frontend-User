@@ -1,10 +1,10 @@
 import 'package:buddy_blues/screens/widget/login-register/pass_textfield_widget.dart';
-import 'package:buddy_blues/screens/widget/login-register/textfield_widget.dart';
+import 'package:buddy_blues/widget/textfield_widget.dart';
 import 'package:flutter/material.dart';
 
-import '../theme/theme_colorstyle.dart';
-import '../theme/theme_textstyle.dart';
-import '../widget/main_button.dart';
+import '../../theme/theme_colorstyle.dart';
+import '../../theme/theme_textstyle.dart';
+import '../../widget/main_button.dart';
 
 class RegisterPage extends StatefulWidget {
   const RegisterPage({super.key});
@@ -58,7 +58,7 @@ class _RegisterPageState extends State<RegisterPage> {
                 height: double.infinity,
                 width: double.infinity,
                 decoration: BoxDecoration(
-                  color: ThemeColor().grey1,
+                  color: ThemeColor().grey,
                   borderRadius: const BorderRadius.only(
                     topLeft: Radius.circular(50),
                     topRight: Radius.circular(50),

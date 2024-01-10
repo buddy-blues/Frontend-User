@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../theme/theme_textstyle.dart';
+import '../theme/theme_textstyle.dart';
 
 class TextfieldWidget extends StatelessWidget {
   final String title;

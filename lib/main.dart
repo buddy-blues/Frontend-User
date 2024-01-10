@@ -1,7 +1,9 @@
-import 'package:buddy_blues/screens/login_page.dart';
-import 'package:buddy_blues/screens/onboarding_page.dart';
-import 'package:buddy_blues/screens/register_page.dart';
-import 'package:buddy_blues/screens/start_page.dart';
+import 'package:buddy_blues/screens/page/home_page.dart';
+import 'package:buddy_blues/screens/page/login_page.dart';
+import 'package:buddy_blues/screens/page/onboarding_page.dart';
+import 'package:buddy_blues/screens/page/profile_page.dart';
+import 'package:buddy_blues/screens/page/register_page.dart';
+import 'package:buddy_blues/screens/page/start_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -24,7 +26,9 @@ class MyApp extends StatelessWidget {
       routes: {
         '/start': (context) => const StartPage(),
         '/login': (context) => const LoginPage(),
-        '/register': (context) => const RegisterPage()
+        '/register': (context) => const RegisterPage(),
+        '/home':(context) => const HomePage(),
+        '/profile' :(context) => const ProfilePage()
       },
     );
   }

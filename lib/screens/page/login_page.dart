@@ -1,5 +1,5 @@
 import 'package:buddy_blues/screens/widget/login-register/pass_textfield_widget.dart';
-import 'package:buddy_blues/screens/widget/login-register/textfield_widget.dart';
+import 'package:buddy_blues/widget/textfield_widget.dart';
 import 'package:buddy_blues/theme/theme_colorstyle.dart';
 import 'package:buddy_blues/theme/theme_textstyle.dart';
 import 'package:buddy_blues/widget/main_button.dart';
@@ -57,7 +57,7 @@ class _LoginPageState extends State<LoginPage> {
                 height: double.infinity,
                 width: double.infinity,
                 decoration: BoxDecoration(
-                  color: ThemeColor().grey1,
+                  color: ThemeColor().grey,
                   borderRadius: const BorderRadius.only(
                     topLeft: Radius.circular(50),
                     topRight: Radius.circular(50),
@@ -80,7 +80,11 @@ class _LoginPageState extends State<LoginPage> {
                         isHidden: isHide,
                       ),
                       const SizedBox(height: 36),
-                      MainButtonWidget(title: 'Login', onPressed: () {})
+                      MainButtonWidget(
+                          title: 'Login',
+                          onPressed: () {
+                            Navigator.pushNamed(context, '/home');
+                          })
                     ],
                   ),
                 ),
