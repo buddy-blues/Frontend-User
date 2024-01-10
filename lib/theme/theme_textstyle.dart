@@ -8,6 +8,11 @@ class ThemeText {
       fontWeight: FontWeight.w700,
       color: ThemeColor().neutral900);
 
+  TextStyle robotoBold30 = GoogleFonts.roboto(
+      fontSize: 30,
+      fontWeight: FontWeight.w700,
+      color: ThemeColor().neutral900);
+
   TextStyle robotoMedium = GoogleFonts.roboto(
       fontSize: 22,
       fontWeight: FontWeight.w500,
@@ -30,6 +35,9 @@ class ThemeText {
 
   TextStyle robotoRegular =
       GoogleFonts.roboto(fontSize: 18, fontWeight: FontWeight.w400);
+
+  TextStyle robotoRegular12 =
+      GoogleFonts.roboto(fontSize: 12, fontWeight: FontWeight.w400);
 
   TextStyle robotoSmall =
       GoogleFonts.roboto(fontSize: 16, fontWeight: FontWeight.w400);

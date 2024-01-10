@@ -47,69 +47,17 @@ class _HomePageState extends State<HomePage> {
         ],
       ),
       floatingActionButton: FloatingActionButton(
-          onPressed: () {
-            
-          },
-          backgroundColor: ThemeColor().bluePrimary50,
-          shape: const CircleBorder(),
-          child: SizedBox(
-              height: 20,
-              width: 23,
-              child: Image.asset(
-                'assets/icons/robot.png',
-                fit: BoxFit.cover,
-              ))),
-      bottomNavigationBar: Container(
-        decoration: BoxDecoration(
-          boxShadow: [
-            BoxShadow(
-              color: Colors.grey.withOpacity(0.5),
-              spreadRadius: 2,
-              blurRadius: 5,
-              offset: const Offset(0, 2),
-            ),
-          ],
-        ),
-        child: ClipRRect(
-          borderRadius: const BorderRadius.only(
-            topLeft: Radius.circular(10.0),
-            topRight: Radius.circular(10.0),
-          ),
-          child: BottomNavigationBar(
-            type: BottomNavigationBarType.fixed,
-            items: const <BottomNavigationBarItem>[
-              BottomNavigationBarItem(
-                icon: Icon(Icons.home_filled),
-                label: 'Home',
-              ),
-              BottomNavigationBarItem(
-                icon: Icon(Icons.forum_rounded),
-                label: 'Forum',
-              ),
-              BottomNavigationBarItem(
-                icon: Icon(Icons.book),
-                label: 'Module',
-              ),
-              BottomNavigationBarItem(
-                icon: Icon(Icons.people),
-                label: 'Conselling',
-              ),
-              BottomNavigationBarItem(
-                icon: Icon(Icons.person_outline),
-                label: 'Profile',
-              ),
-            ],
-            currentIndex: selectedIndex,
-            selectedItemColor: ThemeColor().bluePrimary500,
-            onTap: (index) {
-              setState(() {
-                selectedIndex = index;
-              });
-              if (selectedIndex == 0) {
-              } else if (selectedIndex == 4) {
-                Navigator.pushNamed(context, '/profile');
-              }
-            },
+        onPressed: () {
+          Navigator.pushNamed(context, '/chatbot');
+        },
+        backgroundColor: ThemeColor().bluePrimary50,
+        shape: const CircleBorder(),
+        child: SizedBox(
+          height: 20,
+          width: 23,
+          child: Image.asset(
+            'assets/icons/robot.png',
+            fit: BoxFit.cover,
           ),
         ),
       ),

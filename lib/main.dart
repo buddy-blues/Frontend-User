@@ -1,3 +1,5 @@
+import 'package:buddy_blues/screens/page/chatBot_page.dart';
+import 'package:buddy_blues/screens/page/dashboard_page.dart';
 import 'package:buddy_blues/screens/page/home_page.dart';
 import 'package:buddy_blues/screens/page/login_page.dart';
 import 'package:buddy_blues/screens/page/onboarding_page.dart';
@@ -27,8 +29,10 @@ class MyApp extends StatelessWidget {
         '/start': (context) => const StartPage(),
         '/login': (context) => const LoginPage(),
         '/register': (context) => const RegisterPage(),
-        '/home':(context) => const HomePage(),
-        '/profile' :(context) => const ProfilePage()
+        '/home': (context) => const HomePage(),
+        '/profile': (context) => const ProfilePage(),
+        '/chatbot': (context) => const ChatbotPage(),
+        '/dashboard': (context) => const DashboardPage()
       },
     );
   }

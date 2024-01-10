@@ -17,6 +17,7 @@ class ThemeColor {
   Color grey = const Color(0xFFF6F6F7);
   Color grey2 = const Color(0xFFD2D2D2);
   Color purple = const Color(0xFFCBB9F0);
+  Color darkPurple = const Color(0xFF3C4E78);
   Color green = const Color(0xFFDAFFC4);
   Color yellow = const Color(0xFFF9FFB5);
 }

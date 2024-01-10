@@ -83,7 +83,7 @@ class _LoginPageState extends State<LoginPage> {
                       MainButtonWidget(
                           title: 'Login',
                           onPressed: () {
-                            Navigator.pushNamed(context, '/home');
+                            Navigator.pushNamed(context, '/dashboard');
                           })
                     ],
                   ),
