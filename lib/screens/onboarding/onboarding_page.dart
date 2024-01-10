@@ -1,5 +1,5 @@
-import 'package:buddy_blues/screens/widget/onboarding/onboarding_bottom.dart';
-import 'package:buddy_blues/screens/widget/onboarding/onboarding_content.dart';
+import 'package:buddy_blues/screens/onboarding/widget/onboarding_bottom.dart';
+import 'package:buddy_blues/screens/onboarding/widget/onboarding_content.dart';
 import 'package:buddy_blues/theme/theme_colorstyle.dart';
 import 'package:flutter/material.dart';
 
@@ -17,7 +17,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
     {
       "title": "Welcome to Buddy Blues",
       "desc": "",
-      "imagePath": "assets/images/onboarding1.png"
+      "imagePath": "assets/images/buddyblues_logo.png"
     },
     {
       "title": "Seeking Help?",

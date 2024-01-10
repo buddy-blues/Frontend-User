@@ -1,4 +1,4 @@
-import 'package:buddy_blues/screens/widget/home/header_menu.dart';
+import 'package:buddy_blues/screens/home/widget/header_menu.dart';
 import 'package:buddy_blues/theme/theme_colorstyle.dart';
 import 'package:buddy_blues/theme/theme_textstyle.dart';
 import 'package:flutter/material.dart';
@@ -12,7 +12,9 @@ class ArticleMenuWidget extends StatelessWidget {
       children: [
         HeaderMenuWidget(
           title: "Article",
-          onTap: () {},
+          onTap: () {
+            Navigator.pushNamed(context, "/article");
+          },
         ),
         const SizedBox(height: 10),
         const Row(

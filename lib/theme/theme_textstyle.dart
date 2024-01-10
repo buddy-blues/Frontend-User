@@ -39,6 +39,9 @@ class ThemeText {
   TextStyle robotoRegular12 =
       GoogleFonts.roboto(fontSize: 12, fontWeight: FontWeight.w400);
 
+      TextStyle robotoRegular14 =
+      GoogleFonts.roboto(fontSize: 14, fontWeight: FontWeight.w400);
+
   TextStyle robotoSmall =
       GoogleFonts.roboto(fontSize: 16, fontWeight: FontWeight.w400);
 

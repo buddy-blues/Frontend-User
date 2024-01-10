@@ -29,11 +29,17 @@ class OnboardingBottomWidget extends StatelessWidget {
               dotsCount: dotsCount,
               position: dotsPosition,
             ),
-            Text(
-              "Skip",
-              style: ThemeText()
-                  .robotoRegular
-                  .copyWith(color: ThemeColor().bluePrimary800),
+            GestureDetector(
+              onTap: () {
+                Navigator.pushNamedAndRemoveUntil(
+                    context, "/start", (route) => false);
+              },
+              child: Text(
+                "Skip",
+                style: ThemeText()
+                    .robotoRegular
+                    .copyWith(color: ThemeColor().bluePrimary800),
+              ),
             )
           ],
         ),

@@ -1,5 +1,5 @@
-import 'package:buddy_blues/screens/widget/chatBot/bot_chat.dart';
-import 'package:buddy_blues/screens/widget/chatBot/user_chat.dart';
+import 'package:buddy_blues/screens/chatBot/widget/bot_chat.dart';
+import 'package:buddy_blues/screens/chatBot/widget/user_chat.dart';
 import 'package:buddy_blues/theme/theme_colorstyle.dart';
 import 'package:buddy_blues/theme/theme_textstyle.dart';
 import 'package:flutter/material.dart';
@@ -13,11 +13,16 @@ class ChatbotPage extends StatelessWidget {
         appBar: AppBar(
           iconTheme: const IconThemeData(color: Colors.white),
           backgroundColor: ThemeColor().bluePrimary500,
-          title: Center(
-              child: Text(
+          centerTitle: true,
+          title: Text(
             "ChatBot AI",
             style: ThemeText().robotoMedium.copyWith(color: Colors.white),
-          )),
+          ),
+          leading: IconButton(
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              icon: const Icon(Icons.arrow_back_ios)),
         ),
         body: Stack(
           children: [
@@ -27,12 +32,6 @@ class ChatbotPage extends StatelessWidget {
                 children: const [
                   BotBubleChatWidget(
                     message: "Hi! How can I help you today?",
-                  ),
-                  UserBubleChatWidget(
-                      message: "I don't know what to do with my baby"),
-                  BotBubleChatWidget(
-                    message:
-                        "If you're feeling overhelmed or unsure about specific aspects of baby care, don't hesitate to seek guidance from experienced parents, friends, family or professionals. Parenting is a learning process, and it's okay to ask for help",
                   ),
                   UserBubleChatWidget(
                       message: "I don't know what to do with my baby"),

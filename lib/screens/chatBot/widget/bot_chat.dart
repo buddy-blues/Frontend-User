@@ -23,7 +23,6 @@ class BotBubleChatWidget extends StatelessWidget {
               children: [
                 Container(
                   width: MediaQuery.of(context).size.width - 150,
-                  key: const Key("chat"),
                   decoration: BoxDecoration(
                     borderRadius: const BorderRadius.only(
                         topLeft: Radius.circular(20),

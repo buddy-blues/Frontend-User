@@ -1,8 +1,8 @@
-import 'package:buddy_blues/screens/widget/home/article_menu_widget.dart';
-import 'package:buddy_blues/screens/widget/home/current_modul_widget.dart';
-import 'package:buddy_blues/screens/widget/home/mood_track_widget.dart';
-import 'package:buddy_blues/screens/widget/home/today_article_widget.dart';
-import 'package:buddy_blues/screens/widget/home/todolist_widget.dart';
+import 'package:buddy_blues/screens/home/widget/article_menu_widget.dart';
+import 'package:buddy_blues/screens/home/widget/current_modul_widget.dart';
+import 'package:buddy_blues/screens/home/widget/mood_track_widget.dart';
+import 'package:buddy_blues/screens/home/widget/today_article_widget.dart';
+import 'package:buddy_blues/screens/home/widget/todolist_widget.dart';
 import 'package:buddy_blues/theme/theme_colorstyle.dart';
 import 'package:buddy_blues/theme/theme_textstyle.dart';
 import 'package:flutter/material.dart';

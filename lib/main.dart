@@ -1,11 +1,14 @@
-import 'package:buddy_blues/screens/page/chatBot_page.dart';
-import 'package:buddy_blues/screens/page/dashboard_page.dart';
-import 'package:buddy_blues/screens/page/home_page.dart';
-import 'package:buddy_blues/screens/page/login_page.dart';
-import 'package:buddy_blues/screens/page/onboarding_page.dart';
-import 'package:buddy_blues/screens/page/profile_page.dart';
-import 'package:buddy_blues/screens/page/register_page.dart';
-import 'package:buddy_blues/screens/page/start_page.dart';
+import 'package:buddy_blues/screens/article/article_page.dart';
+import 'package:buddy_blues/screens/chatBot/page/chatBot_page.dart';
+import 'package:buddy_blues/screens/dashboard_page.dart';
+import 'package:buddy_blues/screens/home/page/home_page.dart';
+import 'package:buddy_blues/screens/module/detail_module_page.dart';
+import 'package:buddy_blues/screens/module/list_module_page.dart';
+import 'package:buddy_blues/screens/login-register/page/login_page.dart';
+import 'package:buddy_blues/screens/onboarding/onboarding_page.dart';
+import 'package:buddy_blues/screens/profile/profile_page.dart';
+import 'package:buddy_blues/screens/login-register/page/register_page.dart';
+import 'package:buddy_blues/screens/start/start_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -32,7 +35,10 @@ class MyApp extends StatelessWidget {
         '/home': (context) => const HomePage(),
         '/profile': (context) => const ProfilePage(),
         '/chatbot': (context) => const ChatbotPage(),
-        '/dashboard': (context) => const DashboardPage()
+        '/dashboard': (context) => const DashboardPage(),
+        '/article': (context) => const ArticlePage(),
+        '/listModule':(context) => const ListModulePage(),
+        '/detailModule' :(context) => const DetailModulePage()
       },
     );
   }
