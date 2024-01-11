@@ -1,4 +1,4 @@
-import 'package:buddy_blues/widget/list_modul_article_widget.dart';
+import 'package:buddy_blues/screens/module/widget/list_modul_widget.dart';
 import 'package:buddy_blues/widget/search_bar_widget.dart';
 import 'package:buddy_blues/theme/theme_colorstyle.dart';
 import 'package:buddy_blues/theme/theme_textstyle.dart';
@@ -71,7 +71,7 @@ class ModulePage extends StatelessWidget {
                 child: ListView.builder(
                   itemCount: listModule.length,
                   itemBuilder: (context, index) {
-                    return ListModuleArticleWidget(
+                    return ListModuleWidget(
                       title: listModule[index]["title"],
                       desc: listModule[index]["desc"],
                       image: listModule[index]["image"],

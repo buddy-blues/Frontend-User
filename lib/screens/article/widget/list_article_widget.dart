@@ -2,15 +2,18 @@ import 'package:buddy_blues/theme/theme_colorstyle.dart';
 import 'package:buddy_blues/theme/theme_textstyle.dart';
 import 'package:flutter/material.dart';
 
-class ListModuleArticleWidget extends StatelessWidget {
+class ListArticleWidget extends StatelessWidget {
   final String title;
   final String desc;
+  final String published;
   final String image;
   final Function() onTap;
-  const ListModuleArticleWidget({
+
+  const ListArticleWidget({
     super.key,
     required this.title,
     required this.desc,
+    required this.published,
     required this.image,
     required this.onTap,
   });
@@ -23,7 +26,6 @@ class ListModuleArticleWidget extends StatelessWidget {
           onTap: onTap,
           child: Container(
             padding: const EdgeInsets.all(18),
-            height: 117,
             decoration: BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.circular(15),
@@ -64,9 +66,12 @@ class ListModuleArticleWidget extends StatelessWidget {
                         style: ThemeText().robotoRegular12.copyWith(
                               color: ThemeColor().neutral900,
                             ),
-                        maxLines: 3,
-                        overflow: TextOverflow.ellipsis,
-                        textAlign: TextAlign.justify,
+                      ),
+                      Text(
+                        published,
+                        style: ThemeText().robotoRegular12.copyWith(
+                              color: ThemeColor().neutral900,
+                            ),
                       ),
                     ],
                   ),

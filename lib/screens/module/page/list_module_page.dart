@@ -1,4 +1,4 @@
-import 'package:buddy_blues/widget/list_modul_article_widget.dart';
+import 'package:buddy_blues/screens/module/widget/list_modul_widget.dart';
 import 'package:buddy_blues/theme/theme_colorstyle.dart';
 import 'package:buddy_blues/theme/theme_textstyle.dart';
 import 'package:flutter/material.dart';
@@ -54,7 +54,7 @@ class ListModulePage extends StatelessWidget {
               child: ListView.builder(
                 itemCount: pregnancyModule.length,
                 itemBuilder: (context, index) {
-                  return ListModuleArticleWidget(
+                  return ListModuleWidget(
                     title: pregnancyModule[index]["title"],
                     desc: pregnancyModule[index]["desc"],
                     image: pregnancyModule[index]["image"],
