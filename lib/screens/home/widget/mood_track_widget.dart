@@ -32,31 +32,45 @@ class MoodTrackWidget extends StatelessWidget {
                 color: ThemeColor().purple,
                 icon: const Iconify(FluentEmojiHighContrast.loudly_crying_face),
                 title: "Very Sad",
-                onTap: () {},
+                onTap: () {
+                  Navigator.pushNamed(context, "/moodRespon",
+                      arguments: "Very Sad");
+                },
               ),
               MoodContainerWidget(
                 color: ThemeColor().bluePrimary100,
                 icon: const Iconify(Majesticons.emoji_sad_line),
                 title: "Sad",
-                onTap: () {},
+                onTap: () {
+                  Navigator.pushNamed(context, "/moodRespon", arguments: "Sad");
+                },
               ),
               MoodContainerWidget(
                 color: ThemeColor().ligthBlue2,
                 icon: const Iconify(Ph.smiley_meh_bold),
                 title: "So So",
-                onTap: () {},
+                onTap: () {
+                  Navigator.pushNamed(context, "/moodRespon",
+                      arguments: "So So");
+                },
               ),
               MoodContainerWidget(
                 color: ThemeColor().green,
                 icon: const Iconify(La.smile_beam),
                 title: "Happy",
-                onTap: () {},
+                onTap: () {
+                  Navigator.pushNamed(context, "/moodRespon",
+                      arguments: "Happy");
+                },
               ),
               MoodContainerWidget(
                 color: ThemeColor().yellow,
                 icon: const Iconify(FaRegular.laugh_beam),
                 title: "So Happy",
-                onTap: () {},
+                onTap: () {
+                  Navigator.pushNamed(context, "/moodRespon",
+                      arguments: "So Happy");
+                },
               )
             ],
           ),
@@ -97,7 +111,9 @@ class MoodContainerWidget extends StatelessWidget {
           const SizedBox(height: 3),
           Text(
             title,
-            style: ThemeText().robotoMedium12. copyWith(color: ThemeColor().neutral900),
+            style: ThemeText()
+                .robotoMedium12
+                .copyWith(color: ThemeColor().neutral900),
           )
         ],
       ),

@@ -39,12 +39,11 @@ class ListArticleWidget extends StatelessWidget {
               ],
             ),
             child: Row(
-              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 ClipRRect(
                   borderRadius: BorderRadius.circular(5),
                   child: SizedBox(
-                    width: 72.96,
+                    width: 80,
                     height: 80,
                     child: Image.asset(
                       image,
@@ -60,6 +59,8 @@ class ListArticleWidget extends StatelessWidget {
                       Text(
                         title,
                         style: ThemeText().robotoMedium20,
+                        maxLines: 2,
+                        overflow: TextOverflow.ellipsis,
                       ),
                       Text(
                         desc,

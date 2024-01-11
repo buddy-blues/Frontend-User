@@ -5,6 +5,7 @@ import 'package:buddy_blues/screens/home/page/home_page.dart';
 import 'package:buddy_blues/screens/module/page/detail_module_page.dart';
 import 'package:buddy_blues/screens/module/page/list_module_page.dart';
 import 'package:buddy_blues/screens/login-register/page/login_page.dart';
+import 'package:buddy_blues/screens/mood_respon/mood_respon_page.dart';
 import 'package:buddy_blues/screens/onboarding/onboarding_page.dart';
 import 'package:buddy_blues/screens/profile/profile_page.dart';
 import 'package:buddy_blues/screens/login-register/page/register_page.dart';
@@ -38,7 +39,8 @@ class MyApp extends StatelessWidget {
         '/dashboard': (context) => const DashboardPage(),
         '/article': (context) => const ArticlePage(),
         '/listModule':(context) => const ListModulePage(),
-        '/detailModule' :(context) => const DetailModulePage()
+        '/detailModule' :(context) => const DetailModulePage(),
+        '/moodRespon' :(context) => const MoodResponPage()
       },
     );
   }
