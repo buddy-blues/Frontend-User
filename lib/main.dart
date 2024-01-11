@@ -1,6 +1,7 @@
 import 'package:buddy_blues/screens/article/article_page.dart';
 import 'package:buddy_blues/screens/chatBot/page/chatBot_page.dart';
 import 'package:buddy_blues/screens/dashboard_page.dart';
+import 'package:buddy_blues/screens/history/page/history_page.dart';
 import 'package:buddy_blues/screens/home/page/home_page.dart';
 import 'package:buddy_blues/screens/module/page/detail_module_page.dart';
 import 'package:buddy_blues/screens/module/page/list_module_page.dart';
@@ -38,9 +39,10 @@ class MyApp extends StatelessWidget {
         '/chatbot': (context) => const ChatbotPage(),
         '/dashboard': (context) => const DashboardPage(),
         '/article': (context) => const ArticlePage(),
-        '/listModule':(context) => const ListModulePage(),
-        '/detailModule' :(context) => const DetailModulePage(),
-        '/moodRespon' :(context) => const MoodResponPage()
+        '/listModule': (context) => const ListModulePage(),
+        '/detailModule': (context) => const DetailModulePage(),
+        '/moodRespon': (context) => const MoodResponPage(),
+        '/history': (context) => const HistoryPage()
       },
     );
   }

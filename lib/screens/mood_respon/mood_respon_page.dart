@@ -50,7 +50,11 @@ class MoodResponPage extends StatelessWidget {
       ),
       bottomNavigationBar: Padding(
         padding: const EdgeInsets.all(20),
-        child: MainButtonWidget(title: "History", onPressed: () {}),
+        child: MainButtonWidget(
+            title: "History",
+            onPressed: () {
+              Navigator.pushReplacementNamed(context, "/history");
+            }),
       ),
     );
   }

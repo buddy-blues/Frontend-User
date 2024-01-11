@@ -23,7 +23,7 @@ class ListModuleWidget extends StatelessWidget {
           onTap: onTap,
           child: Container(
             padding: const EdgeInsets.all(18),
-            height: 117,
+            // height: 117,
             decoration: BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.circular(15),
