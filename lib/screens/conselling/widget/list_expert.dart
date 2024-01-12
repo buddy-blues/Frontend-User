@@ -53,7 +53,6 @@ class ListtExpertWidget extends StatelessWidget {
                     style: ThemeText().robotoRegular14,
                   ),
                   Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Row(
                         children: [
@@ -65,6 +64,7 @@ class ListtExpertWidget extends StatelessWidget {
                           const Text("Available")
                         ],
                       ),
+                      const SizedBox(width: 50),
                       Row(
                         children: [
                           Iconify(
