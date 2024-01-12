@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "376849849829",
+    "project_id": "buddyblues-9d4b4",
+    "storage_bucket": "buddyblues-9d4b4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:376849849829:android:f109aed0f693b3a339a30c",
+        "android_client_info": {
+          "package_name": "com.example.buddy_blues"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "376849849829-s28nbt2tfg0io8uj4egj75tdfhrn06qd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA6LT18kEkNRdKb4Xrw19ySIzO0cDsnvCg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "376849849829-s28nbt2tfg0io8uj4egj75tdfhrn06qd.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "376849849829-15bnbolkctfeb4h78v24okv1pigbkiq6.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.buddyBlues"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
