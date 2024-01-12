@@ -39,45 +39,46 @@ class _ToDoListWidgetState extends State<ToDoListWidget> {
         ),
         const SizedBox(height: 20),
         Container(
-            decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.circular(12),
-              boxShadow: [
-                BoxShadow(
-                  color: Colors.black.withOpacity(0.1),
-                  spreadRadius: 1,
-                  blurRadius: 10,
-                  offset: const Offset(0, 4),
-                ),
-              ],
+          decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(12),
+            boxShadow: [
+              BoxShadow(
+                color: Colors.black.withOpacity(0.1),
+                spreadRadius: 1,
+                blurRadius: 10,
+                offset: const Offset(0, 4),
+              ),
+            ],
+          ),
+          child: ListTile(
+            contentPadding:
+                const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
+            title: Text(
+              "Go To Doctor",
+              style: ThemeText().robotoSmallSemiBold,
             ),
-            child: ListTile(
-              contentPadding:
-                  const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
-              title: Text(
-                "Go To Doctor",
-                style: ThemeText().robotoSmallSemiBold,
+            subtitle: Text(
+              "Today on 10:00 AM",
+              style: ThemeText()
+                  .robotoMedium12
+                  .copyWith(color: ThemeColor().netural700),
+            ),
+            trailing: Transform.scale(
+              scale: 1.2,
+              child: Checkbox(
+                checkColor: Colors.white,
+                activeColor: ThemeColor().bluePrimary300,
+                value: isChecked,
+                onChanged: (value) {
+                  setState(() {
+                    isChecked = value!;
+                  });
+                },
               ),
-              subtitle: Text(
-                "Today on 10:00 AM",
-                style: ThemeText()
-                    .robotoMedium12
-                    .copyWith(color: ThemeColor().netural700),
-              ),
-              trailing: Transform.scale(
-                scale: 1.2,
-                child: Checkbox(
-                  checkColor: Colors.white,
-                  activeColor: ThemeColor().bluePrimary300,
-                  value: isChecked,
-                  onChanged: (value) {
-                    setState(() {
-                      isChecked = value!;
-                    });
-                  },
-                ),
-              ),
-            ))
+            ),
+          ),
+        )
       ],
     );
   }

@@ -2,7 +2,6 @@ import 'package:buddy_blues/theme/theme_textstyle.dart';
 import 'package:flutter/material.dart';
 import 'package:iconify_flutter/iconify_flutter.dart';
 import 'package:iconify_flutter/icons/fluent_emoji_high_contrast.dart';
-import 'package:iconify_flutter/icons/la.dart';
 
 class MoodHistoryWidget extends StatelessWidget {
   const MoodHistoryWidget({super.key});

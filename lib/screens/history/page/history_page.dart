@@ -1,6 +1,8 @@
 import 'package:buddy_blues/screens/history/widget/mood_history_widget.dart';
+import 'package:buddy_blues/screens/home/widget/todolist_widget.dart';
 import 'package:buddy_blues/theme/theme_colorstyle.dart';
 import 'package:buddy_blues/theme/theme_textstyle.dart';
+import 'package:buddy_blues/widget/list_todolist.dart';
 import 'package:flutter/material.dart';
 
 class HistoryPage extends StatelessWidget {
@@ -48,21 +50,28 @@ class HistoryPage extends StatelessWidget {
                   indicatorColor: Colors.blue,
                 ),
                 Expanded(
-                  child: TabBarView(
-                    children: [
-                      Padding(
-                        padding: EdgeInsets.only(top: 10, left: 21, right: 21),
-                        child: Column(
+                  child: Padding(
+                    padding: EdgeInsets.only(top: 10, left: 21, right: 21),
+                    child: TabBarView(
+                      children: [
+                        Column(
                           children: [
                             MoodHistoryWidget(),
                             MoodHistoryWidget(),
                             MoodHistoryWidget(),
                           ],
                         ),
-                      ),
-                      Text("Halo "),
-                      Text("Halo "),
-                    ],
+                        Column(
+                          children: [
+                            ListTodolistWidget(isChecked: true),
+                            ListTodolistWidget(isChecked: true),
+                            ListTodolistWidget(isChecked: true),
+                          ],
+                        ),
+                        // ToDoListWidget(),
+                        Text("Halo "),
+                      ],
+                    ),
                   ),
                 )
               ],
