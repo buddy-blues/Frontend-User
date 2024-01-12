@@ -1,5 +1,5 @@
 import 'package:buddy_blues/screens/conselling/conselling_page.dart';
-import 'package:buddy_blues/screens/forum/forum_page.dart';
+import 'package:buddy_blues/screens/forum/page/forum_page.dart';
 import 'package:buddy_blues/screens/home/page/home_page.dart';
 import 'package:buddy_blues/screens/module/page/module_page.dart';
 import 'package:buddy_blues/screens/profile/profile_page.dart';
