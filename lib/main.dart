@@ -11,6 +11,7 @@ import 'package:buddy_blues/screens/onboarding/onboarding_page.dart';
 import 'package:buddy_blues/screens/profile/profile_page.dart';
 import 'package:buddy_blues/screens/login-register/page/register_page.dart';
 import 'package:buddy_blues/screens/start/start_page.dart';
+import 'package:buddy_blues/screens/todolist/todolist_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -42,7 +43,8 @@ class MyApp extends StatelessWidget {
         '/listModule': (context) => const ListModulePage(),
         '/detailModule': (context) => const DetailModulePage(),
         '/moodRespon': (context) => const MoodResponPage(),
-        '/history': (context) => const HistoryPage()
+        '/history': (context) => const HistoryPage(),
+        '/todolist': (context) => const TodolistPage()
       },
     );
   }

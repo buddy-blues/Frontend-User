@@ -3,9 +3,10 @@ import 'package:buddy_blues/theme/theme_textstyle.dart';
 import 'package:flutter/material.dart';
 
 class ListTodolistWidget extends StatefulWidget {
-  final bool isChecked;
+  final Function(bool?)? onChanged;
+  final bool value;
 
-  const ListTodolistWidget({super.key, required this.isChecked});
+  const ListTodolistWidget({super.key, required this.onChanged,required this.value});
 
   @override
   State<ListTodolistWidget> createState() => _ListTodolistWidgetState();
@@ -47,8 +48,8 @@ class _ListTodolistWidgetState extends State<ListTodolistWidget> {
             child: Checkbox(
               checkColor: Colors.white,
               activeColor: ThemeColor().bluePrimary300,
-              value: true,
-              onChanged: (value) {},
+              value: widget.value,
+              onChanged: widget.onChanged,
             ),
           ),
         ),

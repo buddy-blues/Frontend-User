@@ -1,5 +1,4 @@
 import 'package:buddy_blues/screens/history/widget/mood_history_widget.dart';
-import 'package:buddy_blues/screens/home/widget/todolist_widget.dart';
 import 'package:buddy_blues/theme/theme_colorstyle.dart';
 import 'package:buddy_blues/theme/theme_textstyle.dart';
 import 'package:buddy_blues/widget/list_todolist.dart';
@@ -11,7 +10,7 @@ class HistoryPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      initialIndex: 1,
+      initialIndex: 0,
       length: 3,
       child: Scaffold(
           appBar: AppBar(
@@ -29,11 +28,11 @@ class HistoryPage extends StatelessWidget {
               icon: const Icon(Icons.arrow_back_ios),
             ),
           ),
-          body: const Padding(
-            padding: EdgeInsets.only(top: 20),
+          body: Padding(
+            padding: const EdgeInsets.only(top: 20),
             child: Column(
               children: [
-                TabBar(
+                const TabBar(
                   tabs: [
                     Column(
                       children: [Text("Mood"), SizedBox(height: 10)],
@@ -51,10 +50,11 @@ class HistoryPage extends StatelessWidget {
                 ),
                 Expanded(
                   child: Padding(
-                    padding: EdgeInsets.only(top: 10, left: 21, right: 21),
+                    padding:
+                        const EdgeInsets.only(top: 10, left: 21, right: 21),
                     child: TabBarView(
                       children: [
-                        Column(
+                        const Column(
                           children: [
                             MoodHistoryWidget(),
                             MoodHistoryWidget(),
@@ -63,13 +63,21 @@ class HistoryPage extends StatelessWidget {
                         ),
                         Column(
                           children: [
-                            ListTodolistWidget(isChecked: true),
-                            ListTodolistWidget(isChecked: true),
-                            ListTodolistWidget(isChecked: true),
+                            ListTodolistWidget(
+                              onChanged: (value) {},
+                              value: true,
+                            ),
+                            ListTodolistWidget(
+                              onChanged: (value) {},
+                              value: true,
+                            ),
+                            ListTodolistWidget(
+                              onChanged: (value) {},
+                              value: true,
+                            ),
                           ],
                         ),
-                        // ToDoListWidget(),
-                        Text("Halo "),
+                        const Text("Halo "),
                       ],
                     ),
                   ),
