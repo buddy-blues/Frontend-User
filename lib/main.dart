@@ -1,5 +1,6 @@
 import 'package:buddy_blues/screens/article/article_page.dart';
 import 'package:buddy_blues/screens/chatBot/page/chatBot_page.dart';
+import 'package:buddy_blues/screens/conselling/confirm_payment_page.dart';
 import 'package:buddy_blues/screens/conselling/detail_expert.dart';
 import 'package:buddy_blues/screens/conselling/payment_page.dart';
 import 'package:buddy_blues/screens/dashboard_page.dart';
@@ -56,7 +57,8 @@ class MyApp extends StatelessWidget {
         '/postforum': (context) => const PostForumPage(),
         '/commentforum': (context) => const CommentForumPage(),
         '/detailexpert': (context) => const DetailExpertPage(),
-        '/payment': (context) => const PaymentPage()
+        '/payment': (context) => const PaymentPage(),
+        '/confirmpayment' :(context) => const ConfirmPaymentPage()
       },
     );
   }

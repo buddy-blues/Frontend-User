@@ -36,11 +36,11 @@ class _ProfilePageState extends State<ProfilePage> {
               ),
               const SizedBox(height: 33),
               const TextfieldWidget(
-                title: "Name",
+                title: "Name", labelTextField: '', isEnabled: true,
               ),
               const SizedBox(height: 24),
               const TextfieldWidget(
-                title: "Email",
+                title: "Email", labelTextField: '', isEnabled: true,
               ),
               const SizedBox(height: 24),
               MainButtonWidget(title: "Edit Profile", onPressed: () {}, isEnabled: true,),

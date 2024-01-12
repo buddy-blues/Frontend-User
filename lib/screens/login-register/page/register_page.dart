@@ -69,11 +69,11 @@ class _RegisterPageState extends State<RegisterPage> {
                   child: Column(
                     children: [
                       const TextfieldWidget(
-                        title: 'Name',
+                        title: 'Name', labelTextField: '', isEnabled: true,
                       ),
                       const SizedBox(height: 26),
                       const TextfieldWidget(
-                        title: 'Email',
+                        title: 'Email', labelTextField: '', isEnabled: true,
                       ),
                       const SizedBox(height: 26),
                       PasswordTextfieldWidget(

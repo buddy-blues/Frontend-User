@@ -49,6 +49,7 @@ class _AddTodolistPageState extends State<AddTodolistPage> {
           children: [
             const TextfieldWidget(
               title: "Thing you have to do",
+              labelTextField: '', isEnabled: true,
             ),
             const SizedBox(height: 20),
             Column(
@@ -130,7 +131,8 @@ class _AddTodolistPageState extends State<AddTodolistPage> {
             const SizedBox(height: 40),
             MainButtonWidget(
               title: "Submit",
-              onPressed: () {}, isEnabled: true,
+              onPressed: () {},
+              isEnabled: true,
             )
           ],
         ),

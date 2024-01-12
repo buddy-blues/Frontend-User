@@ -39,7 +39,7 @@ class _PaymentPageState extends State<PaymentPage> {
       ),
       body: Stack(
         children: [
-          ListView(
+          Column(
             children: [
               Padding(
                 padding:
@@ -73,7 +73,7 @@ class _PaymentPageState extends State<PaymentPage> {
                     MainButtonWidget(
                       title: "Get Appointment",
                       onPressed: () {
-                        Navigator.pushNamed(context, '/payment');
+                        Navigator.pushNamed(context, '/confirmpayment');
                       },
                       isEnabled: buttonEnabled,
                     ),

@@ -27,6 +27,7 @@ class PasswordTextfieldWidget extends StatelessWidget {
         TextField(
           obscureText: isHidden,
           decoration: InputDecoration(
+            contentPadding: const EdgeInsets.all(15),
             suffixIcon: IconButton(
               onPressed: onPressed,
               icon: Icon(isHidden ? Icons.visibility : Icons.visibility_off),
