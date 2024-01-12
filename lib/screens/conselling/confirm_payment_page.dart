@@ -88,7 +88,9 @@ class ConfirmPaymentPage extends StatelessWidget {
                 const SizedBox(height: 24),
                 MainButtonWidget(
                   title: "Confirm Payment",
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushNamed(context, "/afterpayment");
+                  },
                   isEnabled: true,
                 )
               ],
