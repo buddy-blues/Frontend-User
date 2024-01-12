@@ -21,19 +21,19 @@ A new Flutter project.
 ![Alt text](image-17.png)
 
 ## Mood Reaction Page
-- Very Sad
+### Very Sad
 ![Alt text](image-21.png)
 
-- Sad
+### Sad
 ![Alt text](image-22.png)
 
-- So So
+### So So
 ![Alt text](image-23.png)
 
-- Happy
+### Happy
 ![Alt text](image-24.png)
 
-- So Happy
+### So Happy
 ![Alt text](image-25.png)
 
 ## To Do List
