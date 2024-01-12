@@ -43,7 +43,9 @@ class ForumPage extends StatelessWidget {
       body: ListView.builder(
         itemCount: 5,
         itemBuilder: ((context, index) {
-          return const ListForumWidget();
+          return const ListForumWidget(
+            comment: '',
+          );
         }),
       ),
       floatingActionButton: FloatingActionButton(

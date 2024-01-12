@@ -3,7 +3,11 @@ import 'package:iconify_flutter/iconify_flutter.dart';
 import 'package:iconify_flutter/icons/la.dart';
 
 class ListForumWidget extends StatefulWidget {
-  const ListForumWidget({super.key});
+  final String comment;
+  const ListForumWidget({
+    super.key,
+    required this.comment,
+  });
 
   @override
   State<ListForumWidget> createState() => _ListForumWidgetState();
@@ -39,10 +43,14 @@ class _ListForumWidgetState extends State<ListForumWidget> {
             Row(
               children: [
                 IconButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushNamed(context, "/commentforum");
+                  },
                   icon: const Iconify(La.comment_alt),
                 ),
-                const Text("10")
+                const Text("10"),
+                const SizedBox(width: 10),
+                Text(widget.comment)
               ],
             ),
             Row(
