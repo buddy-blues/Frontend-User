@@ -67,7 +67,7 @@ class _LoginPageState extends State<LoginPage> {
                   padding: const EdgeInsets.only(top: 49, left: 36, right: 34),
                   child: Column(
                     children: [
-                      const TextfieldWidget(title: 'Email'),
+                      const TextfieldWidget(title: 'Email',),
                       const SizedBox(height: 26),
                       PasswordTextfieldWidget(
                         title: 'Password',

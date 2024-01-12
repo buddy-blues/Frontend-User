@@ -17,31 +17,41 @@ class _ProfilePageState extends State<ProfilePage> {
     return Scaffold(
       body: Padding(
         padding: const EdgeInsets.only(top: 80, left: 35, right: 35),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Center(
-              child: Text(
-                "Nama Pengguna",
-                style: ThemeText().robotoBold30,
+        child: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Center(
+                child: Text(
+                  "Nama Pengguna",
+                  style: ThemeText().robotoBold30,
+                ),
               ),
-            ),
-            const SizedBox(height: 33),
-            const Center(
-              child: CircleAvatar(
-                radius: 65,
-                backgroundImage: AssetImage('assets/images/profile.png'),
+              const SizedBox(height: 33),
+              const Center(
+                child: CircleAvatar(
+                  radius: 65,
+                  backgroundImage: AssetImage('assets/images/profile.png'),
+                ),
               ),
-            ),
-            const SizedBox(height: 33),
-            const TextfieldWidget(title: "Name"),
-            const SizedBox(height: 24),
-            const TextfieldWidget(title: "Email"),
-            const SizedBox(height: 24),
-            MainButtonWidget(title: "Edit Profile", onPressed: () {}),
-            const SizedBox(height: 24),
-            MainButtonWidget(title: "See History", onPressed: () {})
-          ],
+              const SizedBox(height: 33),
+              const TextfieldWidget(
+                title: "Name",
+              ),
+              const SizedBox(height: 24),
+              const TextfieldWidget(
+                title: "Email",
+              ),
+              const SizedBox(height: 24),
+              MainButtonWidget(title: "Edit Profile", onPressed: () {}),
+              const SizedBox(height: 24),
+              MainButtonWidget(
+                  title: "See History",
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/history');
+                  })
+            ],
+          ),
         ),
       ),
     );

@@ -11,7 +11,9 @@ import 'package:buddy_blues/screens/onboarding/onboarding_page.dart';
 import 'package:buddy_blues/screens/profile/profile_page.dart';
 import 'package:buddy_blues/screens/login-register/page/register_page.dart';
 import 'package:buddy_blues/screens/start/start_page.dart';
+import 'package:buddy_blues/screens/todolist/add_todolist_page.dart';
 import 'package:buddy_blues/screens/todolist/todolist_page.dart';
+import 'package:buddy_blues/theme/theme_colorstyle.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -27,7 +29,8 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        colorScheme:
+            ColorScheme.fromSeed(seedColor: ThemeColor().bluePrimary800),
         useMaterial3: true,
       ),
       home: const OnboardingPage(),
@@ -44,7 +47,8 @@ class MyApp extends StatelessWidget {
         '/detailModule': (context) => const DetailModulePage(),
         '/moodRespon': (context) => const MoodResponPage(),
         '/history': (context) => const HistoryPage(),
-        '/todolist': (context) => const TodolistPage()
+        '/todolist': (context) => const TodolistPage(),
+        '/addtodolist': (context) => const AddTodolistPage()
       },
     );
   }

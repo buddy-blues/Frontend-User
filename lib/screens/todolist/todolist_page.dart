@@ -12,7 +12,6 @@ class TodolistPage extends StatefulWidget {
 
 class _TodolistPageState extends State<TodolistPage> {
   List<bool> isChecked = [false, false, false, false, false];
-  // bool isCheckedList = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -44,6 +43,16 @@ class _TodolistPageState extends State<TodolistPage> {
                 },
                 value: isChecked[index]);
           },
+        ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Navigator.pushNamed(context, '/addtodolist');
+        },
+        backgroundColor: ThemeColor().bluePrimary50,
+        child: Icon(
+          Icons.add,
+          color: ThemeColor().neutral900,
         ),
       ),
     );

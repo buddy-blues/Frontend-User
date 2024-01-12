@@ -68,9 +68,13 @@ class _RegisterPageState extends State<RegisterPage> {
                   padding: const EdgeInsets.only(top: 49, left: 36, right: 34),
                   child: Column(
                     children: [
-                      const TextfieldWidget(title: 'Name'),
+                      const TextfieldWidget(
+                        title: 'Name',
+                      ),
                       const SizedBox(height: 26),
-                      const TextfieldWidget(title: 'Email'),
+                      const TextfieldWidget(
+                        title: 'Email',
+                      ),
                       const SizedBox(height: 26),
                       PasswordTextfieldWidget(
                         title: 'Password',
