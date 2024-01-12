@@ -119,7 +119,9 @@ class _DetailExpertPageState extends State<DetailExpertPage> {
                   const SizedBox(height: 10),
                   MainButtonWidget(
                     title: "Get Appointment",
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/payment');
+                    },
                     isEnabled: buttonEnabled,
                   ),
                 ],
