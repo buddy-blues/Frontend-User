@@ -43,13 +43,13 @@ class _ProfilePageState extends State<ProfilePage> {
                 title: "Email",
               ),
               const SizedBox(height: 24),
-              MainButtonWidget(title: "Edit Profile", onPressed: () {}),
+              MainButtonWidget(title: "Edit Profile", onPressed: () {}, isEnabled: true,),
               const SizedBox(height: 24),
               MainButtonWidget(
                   title: "See History",
                   onPressed: () {
                     Navigator.pushNamed(context, '/history');
-                  })
+                  }, isEnabled: true,)
             ],
           ),
         ),

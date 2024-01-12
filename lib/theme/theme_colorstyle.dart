@@ -9,6 +9,7 @@ class ThemeColor {
   Color bluePrimary500 = const Color(0xFF2180D9);
   Color bluePrimary300 = const Color(0xFF6AAAE6);
   Color bluePrimary100 = const Color(0xFFBAD8F3);
+  Color bluePrimary200 = const Color(0xFF99C5EE);
   Color bluePrimary50 = const Color(0xFFE9F2FB);
   Color secondary100 = const Color(0xFFF1FDE1);
   Color secondary300 = const Color(0xFFC9F8A5);
@@ -20,4 +21,5 @@ class ThemeColor {
   Color darkPurple = const Color(0xFF3C4E78);
   Color green = const Color(0xFFDAFFC4);
   Color yellow = const Color(0xFFF9FFB5);
+  Color orange = const Color(0xFFFF725E);
 }

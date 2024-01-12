@@ -55,7 +55,7 @@ class PostForumPage extends StatelessWidget {
             ),
             MainButtonWidget(
               title: "Post",
-              onPressed: () {},
+              onPressed: () {}, isEnabled: true,
             )
           ],
         ),

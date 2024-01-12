@@ -98,7 +98,7 @@ class _RegisterPageState extends State<RegisterPage> {
                         isHidden: isHide,
                       ),
                       const SizedBox(height: 36),
-                      MainButtonWidget(title: 'Register', onPressed: () {})
+                      MainButtonWidget(title: 'Register', onPressed: () {}, isEnabled: true,)
                     ],
                   ),
                 ),

@@ -59,7 +59,7 @@ class StartPage extends StatelessWidget {
             title: 'Register',
             onPressed: () {
               Navigator.pushNamed(context, '/register');
-            }),
+            }, isEnabled: true,),
       ),
     );
   }

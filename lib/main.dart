@@ -1,5 +1,6 @@
 import 'package:buddy_blues/screens/article/article_page.dart';
 import 'package:buddy_blues/screens/chatBot/page/chatBot_page.dart';
+import 'package:buddy_blues/screens/conselling/detail_expert.dart';
 import 'package:buddy_blues/screens/dashboard_page.dart';
 import 'package:buddy_blues/screens/forum/page/comment_forum_page.dart';
 import 'package:buddy_blues/screens/forum/page/post_forum_page.dart';
@@ -52,7 +53,8 @@ class MyApp extends StatelessWidget {
         '/todolist': (context) => const TodolistPage(),
         '/addtodolist': (context) => const AddTodolistPage(),
         '/postforum': (context) => const PostForumPage(),
-        '/commentforum': (context) => const CommentForumPage()
+        '/commentforum': (context) => const CommentForumPage(),
+        '/detailexpert' :(context) => const DetailExpertPage()
       },
     );
   }

@@ -5,12 +5,13 @@ import 'package:flutter/material.dart';
 class MainButtonWidget extends StatelessWidget {
   final String title;
   final Function()? onPressed;
+  final bool isEnabled;
 
-  const MainButtonWidget({
-    super.key,
-    required this.title,
-    required this.onPressed,
-  });
+  const MainButtonWidget(
+      {super.key,
+      required this.title,
+      required this.onPressed,
+      required this.isEnabled});
 
   @override
   Widget build(BuildContext context) {
@@ -18,10 +19,12 @@ class MainButtonWidget extends StatelessWidget {
       children: [
         Expanded(
           child: ElevatedButton(
-            onPressed: onPressed,
+            onPressed: (isEnabled == true ? onPressed : null),
             style: ElevatedButton.styleFrom(
               padding: const EdgeInsets.all(8),
-              primary: ThemeColor().bluePrimary500,
+              primary: (isEnabled == true
+                  ? ThemeColor().bluePrimary500
+                  : Colors.grey[100]),
               onPrimary: Colors.white,
             ),
             child: SizedBox(

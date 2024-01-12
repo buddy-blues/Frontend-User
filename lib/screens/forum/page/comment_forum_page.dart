@@ -160,7 +160,7 @@ class _CommentForumPageState extends State<CommentForumPage> {
                           height: 40,
                           width: 70,
                           child: MainButtonWidget(
-                              title: "Post", onPressed: () {})),
+                              title: "Post", onPressed: () {}, isEnabled: true,)),
                     )
                   ],
                 )),

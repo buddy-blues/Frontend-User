@@ -54,7 +54,7 @@ class MoodResponPage extends StatelessWidget {
             title: "History",
             onPressed: () {
               Navigator.pushReplacementNamed(context, "/history");
-            }),
+            }, isEnabled: true,),
       ),
     );
   }

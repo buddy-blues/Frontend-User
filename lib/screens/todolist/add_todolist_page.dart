@@ -130,7 +130,7 @@ class _AddTodolistPageState extends State<AddTodolistPage> {
             const SizedBox(height: 40),
             MainButtonWidget(
               title: "Submit",
-              onPressed: () {},
+              onPressed: () {}, isEnabled: true,
             )
           ],
         ),
