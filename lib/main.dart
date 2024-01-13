@@ -1,9 +1,10 @@
-import 'package:buddy_blues/screens/article/article_page.dart';
+import 'package:buddy_blues/screens/article/page/article_page.dart';
 import 'package:buddy_blues/screens/chatBot/page/chatBot_page.dart';
-import 'package:buddy_blues/screens/conselling/after_payment_page.dart';
-import 'package:buddy_blues/screens/conselling/confirm_payment_page.dart';
-import 'package:buddy_blues/screens/conselling/detail_expert.dart';
-import 'package:buddy_blues/screens/conselling/payment_page.dart';
+import 'package:buddy_blues/screens/conselling/page/after_payment_page.dart';
+import 'package:buddy_blues/screens/conselling/page/confirm_payment_page.dart';
+import 'package:buddy_blues/screens/conselling/page/detail_expert.dart';
+import 'package:buddy_blues/screens/conselling/page/payment_method_page.dart';
+import 'package:buddy_blues/screens/conselling/page/payment_page.dart';
 import 'package:buddy_blues/screens/dashboard_page.dart';
 import 'package:buddy_blues/screens/forum/page/comment_forum_page.dart';
 import 'package:buddy_blues/screens/forum/page/post_forum_page.dart';
@@ -58,9 +59,10 @@ class MyApp extends StatelessWidget {
         '/postforum': (context) => const PostForumPage(),
         '/commentforum': (context) => const CommentForumPage(),
         '/detailexpert': (context) => const DetailExpertPage(),
-        '/payment': (context) => const PaymentPage(),
-        '/confirmpayment' :(context) => const ConfirmPaymentPage(),
-        '/afterpayment':(context) => const AfterPaymentPage()
+        '/paymentmethod': (context) => const PaymentMethodPage(),
+        '/confirmpayment': (context) => const ConfirmPaymentPage(),
+        '/afterpayment': (context) => const AfterPaymentPage(),
+        '/payment': (context) => const PaymentPage()
       },
     );
   }

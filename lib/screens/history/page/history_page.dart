@@ -1,6 +1,7 @@
 import 'package:buddy_blues/screens/history/widget/mood_history_widget.dart';
 import 'package:buddy_blues/theme/theme_colorstyle.dart';
 import 'package:buddy_blues/theme/theme_textstyle.dart';
+import 'package:buddy_blues/widget/basic_appbar.dart';
 import 'package:buddy_blues/widget/list_todolist.dart';
 import 'package:flutter/material.dart';
 
@@ -13,20 +14,9 @@ class HistoryPage extends StatelessWidget {
       initialIndex: 0,
       length: 3,
       child: Scaffold(
-          appBar: AppBar(
-            iconTheme: const IconThemeData(color: Colors.white),
-            backgroundColor: ThemeColor().bluePrimary500,
-            centerTitle: true,
-            title: Text(
-              "History",
-              style: ThemeText().robotoMedium.copyWith(color: Colors.white),
-            ),
-            leading: IconButton(
-              onPressed: () {
-                Navigator.pop(context);
-              },
-              icon: const Icon(Icons.arrow_back_ios),
-            ),
+          appBar: const PreferredSize(
+            preferredSize: Size.fromHeight(60),
+            child: BasicAppbar(title: "History"),
           ),
           body: Padding(
             padding: const EdgeInsets.only(top: 20),

@@ -1,7 +1,6 @@
 import 'package:buddy_blues/screens/module/widget/list_modul_widget.dart';
+import 'package:buddy_blues/widget/buddyblues_appbar.dart';
 import 'package:buddy_blues/widget/search_bar_widget.dart';
-import 'package:buddy_blues/theme/theme_colorstyle.dart';
-import 'package:buddy_blues/theme/theme_textstyle.dart';
 import 'package:flutter/material.dart';
 
 class ModulePage extends StatelessWidget {
@@ -30,61 +29,35 @@ class ModulePage extends StatelessWidget {
       },
     ];
     return Scaffold(
-        appBar: AppBar(
-          automaticallyImplyLeading: false,
-          backgroundColor: ThemeColor().bluePrimary500,
-          title: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Text(
-                "BuddyBlues",
-                style: ThemeText().robotoMedium.copyWith(color: Colors.white),
+      appBar: const PreferredSize(
+        preferredSize: Size.fromHeight(60),
+        child: BuddyBluesAppBar(),
+      ),
+      body: Padding(
+        padding: const EdgeInsets.only(top: 20, right: 20, left: 20),
+        child: Column(
+          children: [
+            const SearchBarWidget(),
+            const SizedBox(height: 20),
+            Expanded(
+              child: ListView.builder(
+                itemCount: listModule.length,
+                itemBuilder: (context, index) {
+                  return ListModuleWidget(
+                    title: listModule[index]["title"],
+                    desc: listModule[index]["desc"],
+                    image: listModule[index]["image"],
+                    onTap: () {
+                      Navigator.pushNamed(context, "/listModule",
+                          arguments: listModule[index]["title"]);
+                    },
+                  );
+                },
               ),
-              Row(
-                children: [
-                  IconButton(
-                    onPressed: () {},
-                    icon: const Icon(
-                      Icons.help_outline,
-                      color: Colors.white,
-                    ),
-                  ),
-                  IconButton(
-                    onPressed: () {},
-                    icon: const Icon(
-                      Icons.notifications,
-                      color: Colors.white,
-                    ),
-                  )
-                ],
-              )
-            ],
-          ),
+            ),
+          ],
         ),
-        body: Padding(
-          padding: const EdgeInsets.only(top: 20, right: 20, left: 20),
-          child: Column(
-            children: [
-              const SearchBarWidget(),
-              const SizedBox(height: 20),
-              Expanded(
-                child: ListView.builder(
-                  itemCount: listModule.length,
-                  itemBuilder: (context, index) {
-                    return ListModuleWidget(
-                      title: listModule[index]["title"],
-                      desc: listModule[index]["desc"],
-                      image: listModule[index]["image"],
-                      onTap: () {
-                        Navigator.pushNamed(context, "/listModule",
-                            arguments: listModule[index]["title"]);
-                      },
-                    );
-                  },
-                ),
-              ),
-            ],
-          ),
-        ));
+      ),
+    );
   }
 }

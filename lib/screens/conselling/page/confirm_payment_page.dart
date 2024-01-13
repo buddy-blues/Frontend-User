@@ -2,6 +2,7 @@ import 'package:buddy_blues/screens/conselling/widget/payment_detail_cost.dart';
 import 'package:buddy_blues/screens/conselling/widget/payment_detail_expert.dart';
 import 'package:buddy_blues/theme/theme_colorstyle.dart';
 import 'package:buddy_blues/theme/theme_textstyle.dart';
+import 'package:buddy_blues/widget/basic_appbar.dart';
 import 'package:buddy_blues/widget/main_button.dart';
 import 'package:buddy_blues/widget/textfield_widget.dart';
 import 'package:flutter/material.dart';
@@ -12,19 +13,9 @@ class ConfirmPaymentPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        iconTheme: const IconThemeData(color: Colors.white),
-        backgroundColor: ThemeColor().bluePrimary500,
-        centerTitle: true,
-        title: Text(
-          "Consultation",
-          style: ThemeText().robotoMedium.copyWith(color: Colors.white),
-        ),
-        leading: IconButton(
-            onPressed: () {
-              Navigator.pop(context);
-            },
-            icon: const Icon(Icons.arrow_back_ios)),
+      appBar: const PreferredSize(
+        preferredSize: Size.fromHeight(60),
+        child: BasicAppbar(title: "Consultation"),
       ),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 20),
@@ -89,7 +80,7 @@ class ConfirmPaymentPage extends StatelessWidget {
                 MainButtonWidget(
                   title: "Confirm Payment",
                   onPressed: () {
-                    Navigator.pushNamed(context, "/afterpayment");
+                    Navigator.pushNamed(context, "/payment");
                   },
                   isEnabled: true,
                 )

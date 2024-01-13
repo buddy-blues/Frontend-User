@@ -1,6 +1,7 @@
 import 'package:buddy_blues/screens/todolist/widget/timepicker_widget.dart';
 import 'package:buddy_blues/theme/theme_colorstyle.dart';
 import 'package:buddy_blues/theme/theme_textstyle.dart';
+import 'package:buddy_blues/widget/basic_appbar.dart';
 import 'package:buddy_blues/widget/main_button.dart';
 import 'package:buddy_blues/widget/textfield_widget.dart';
 import 'package:flutter/material.dart';
@@ -28,20 +29,9 @@ class _AddTodolistPageState extends State<AddTodolistPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        iconTheme: const IconThemeData(color: Colors.white),
-        backgroundColor: ThemeColor().bluePrimary500,
-        centerTitle: true,
-        title: Text(
-          "To Do List",
-          style: ThemeText().robotoMedium.copyWith(color: Colors.white),
-        ),
-        leading: IconButton(
-          onPressed: () {
-            Navigator.pop(context);
-          },
-          icon: const Icon(Icons.arrow_back_ios),
-        ),
+      appBar: const PreferredSize(
+        preferredSize: Size.fromHeight(60),
+        child: BasicAppbar(title: "To Do List"),
       ),
       body: Padding(
         padding: const EdgeInsets.all(20),
@@ -49,7 +39,8 @@ class _AddTodolistPageState extends State<AddTodolistPage> {
           children: [
             const TextfieldWidget(
               title: "Thing you have to do",
-              labelTextField: '', isEnabled: true,
+              labelTextField: '',
+              isEnabled: true,
             ),
             const SizedBox(height: 20),
             Column(

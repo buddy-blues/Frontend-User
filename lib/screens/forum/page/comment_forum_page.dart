@@ -1,6 +1,7 @@
 import 'package:buddy_blues/screens/forum/widget/list_forum_widget.dart';
 import 'package:buddy_blues/theme/theme_colorstyle.dart';
 import 'package:buddy_blues/theme/theme_textstyle.dart';
+import 'package:buddy_blues/widget/basic_appbar.dart';
 import 'package:buddy_blues/widget/main_button.dart';
 import 'package:flutter/material.dart';
 import 'package:iconify_flutter/iconify_flutter.dart';
@@ -20,19 +21,9 @@ class _CommentForumPageState extends State<CommentForumPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        iconTheme: const IconThemeData(color: Colors.white),
-        backgroundColor: ThemeColor().bluePrimary500,
-        centerTitle: true,
-        title: Text(
-          "Forum",
-          style: ThemeText().robotoMedium.copyWith(color: Colors.white),
-        ),
-        leading: IconButton(
-            onPressed: () {
-              Navigator.pop(context);
-            },
-            icon: const Icon(Icons.arrow_back_ios)),
+      appBar: const PreferredSize(
+        preferredSize: Size.fromHeight(60),
+        child: BasicAppbar(title: "Forum"),
       ),
       body: Stack(
         children: [
@@ -160,7 +151,10 @@ class _CommentForumPageState extends State<CommentForumPage> {
                           height: 40,
                           width: 70,
                           child: MainButtonWidget(
-                              title: "Post", onPressed: () {}, isEnabled: true,)),
+                            title: "Post",
+                            onPressed: () {},
+                            isEnabled: true,
+                          )),
                     )
                   ],
                 )),

@@ -1,5 +1,6 @@
 import 'package:buddy_blues/theme/theme_colorstyle.dart';
 import 'package:buddy_blues/theme/theme_textstyle.dart';
+import 'package:buddy_blues/widget/basic_appbar.dart';
 import 'package:buddy_blues/widget/main_button.dart';
 import 'package:flutter/material.dart';
 
@@ -9,20 +10,9 @@ class PostForumPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        iconTheme: const IconThemeData(color: Colors.white),
-        backgroundColor: ThemeColor().bluePrimary500,
-        centerTitle: true,
-        title: Text(
-          "Community",
-          style: ThemeText().robotoMedium.copyWith(color: Colors.white),
-        ),
-        leading: IconButton(
-          onPressed: () {
-            Navigator.pop(context);
-          },
-          icon: const Icon(Icons.close),
-        ),
+      appBar: const PreferredSize(
+        preferredSize: Size.fromHeight(60),
+        child: BasicAppbar(title: "Community"),
       ),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 21, vertical: 28),
@@ -55,7 +45,8 @@ class PostForumPage extends StatelessWidget {
             ),
             MainButtonWidget(
               title: "Post",
-              onPressed: () {}, isEnabled: true,
+              onPressed: () {},
+              isEnabled: true,
             )
           ],
         ),

@@ -2,17 +2,18 @@ import 'package:buddy_blues/screens/conselling/widget/payment_detail_cost.dart';
 import 'package:buddy_blues/screens/conselling/widget/payment_detail_expert.dart';
 import 'package:buddy_blues/theme/theme_colorstyle.dart';
 import 'package:buddy_blues/theme/theme_textstyle.dart';
+import 'package:buddy_blues/widget/basic_appbar.dart';
 import 'package:buddy_blues/widget/main_button.dart';
 import 'package:flutter/material.dart';
 
-class PaymentPage extends StatefulWidget {
-  const PaymentPage({super.key});
+class PaymentMethodPage extends StatefulWidget {
+  const PaymentMethodPage({super.key});
 
   @override
-  State<PaymentPage> createState() => _PaymentPageState();
+  State<PaymentMethodPage> createState() => _PaymentPageState();
 }
 
-class _PaymentPageState extends State<PaymentPage> {
+class _PaymentPageState extends State<PaymentMethodPage> {
   List<String> list = <String>[
     'BCA',
     'BNI',
@@ -23,19 +24,9 @@ class _PaymentPageState extends State<PaymentPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        iconTheme: const IconThemeData(color: Colors.white),
-        backgroundColor: ThemeColor().bluePrimary500,
-        centerTitle: true,
-        title: Text(
-          "Consultation",
-          style: ThemeText().robotoMedium.copyWith(color: Colors.white),
-        ),
-        leading: IconButton(
-            onPressed: () {
-              Navigator.pop(context);
-            },
-            icon: const Icon(Icons.arrow_back_ios)),
+      appBar: const PreferredSize(
+        preferredSize: Size.fromHeight(60),
+        child: BasicAppbar(title: "Consultation"),
       ),
       body: Stack(
         children: [

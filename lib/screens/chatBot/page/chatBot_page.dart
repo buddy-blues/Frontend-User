@@ -2,6 +2,7 @@ import 'package:buddy_blues/screens/chatBot/widget/bot_chat.dart';
 import 'package:buddy_blues/screens/chatBot/widget/user_chat.dart';
 import 'package:buddy_blues/theme/theme_colorstyle.dart';
 import 'package:buddy_blues/theme/theme_textstyle.dart';
+import 'package:buddy_blues/widget/basic_appbar.dart';
 import 'package:flutter/material.dart';
 
 class ChatbotPage extends StatelessWidget {
@@ -10,19 +11,9 @@ class ChatbotPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          iconTheme: const IconThemeData(color: Colors.white),
-          backgroundColor: ThemeColor().bluePrimary500,
-          centerTitle: true,
-          title: Text(
-            "ChatBot AI",
-            style: ThemeText().robotoMedium.copyWith(color: Colors.white),
-          ),
-          leading: IconButton(
-              onPressed: () {
-                Navigator.pop(context);
-              },
-              icon: const Icon(Icons.arrow_back_ios)),
+        appBar: const PreferredSize(
+          preferredSize: Size.fromHeight(60),
+          child: BasicAppbar(title: "ChatBot AI"),
         ),
         body: Stack(
           children: [

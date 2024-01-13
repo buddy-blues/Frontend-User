@@ -1,6 +1,7 @@
 import 'package:buddy_blues/screens/module/widget/list_modul_widget.dart';
 import 'package:buddy_blues/theme/theme_colorstyle.dart';
 import 'package:buddy_blues/theme/theme_textstyle.dart';
+import 'package:buddy_blues/widget/basic_appbar.dart';
 import 'package:flutter/material.dart';
 
 class ListModulePage extends StatelessWidget {
@@ -32,19 +33,9 @@ class ListModulePage extends StatelessWidget {
       }
     ];
     return Scaffold(
-      appBar: AppBar(
-        iconTheme: const IconThemeData(color: Colors.white),
-        backgroundColor: ThemeColor().bluePrimary500,
-        centerTitle: true,
-        title: Text(
-          moduleTitle,
-          style: ThemeText().robotoMedium.copyWith(color: Colors.white),
-        ),
-        leading: IconButton(
-            onPressed: () {
-              Navigator.pop(context);
-            },
-            icon: const Icon(Icons.arrow_back_ios)),
+      appBar: PreferredSize(
+        preferredSize: const Size.fromHeight(60),
+        child: BasicAppbar(title: moduleTitle),
       ),
       body: Padding(
         padding: const EdgeInsets.all(20),
@@ -59,7 +50,8 @@ class ListModulePage extends StatelessWidget {
                     desc: pregnancyModule[index]["desc"],
                     image: pregnancyModule[index]["image"],
                     onTap: () {
-                      Navigator.pushNamed(context, "/detailModule", arguments: pregnancyModule[index]["title"] );
+                      Navigator.pushNamed(context, "/detailModule",
+                          arguments: pregnancyModule[index]["title"]);
                     },
                   );
                 },

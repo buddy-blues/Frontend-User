@@ -1,5 +1,6 @@
 import 'package:buddy_blues/theme/theme_colorstyle.dart';
 import 'package:buddy_blues/theme/theme_textstyle.dart';
+import 'package:buddy_blues/widget/basic_appbar.dart';
 import 'package:buddy_blues/widget/main_button.dart';
 import 'package:flutter/material.dart';
 
@@ -21,19 +22,9 @@ class _DetailExpertPageState extends State<DetailExpertPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        iconTheme: const IconThemeData(color: Colors.white),
-        backgroundColor: ThemeColor().bluePrimary500,
-        centerTitle: true,
-        title: Text(
-          "Consultation",
-          style: ThemeText().robotoMedium.copyWith(color: Colors.white),
-        ),
-        leading: IconButton(
-            onPressed: () {
-              Navigator.pop(context);
-            },
-            icon: const Icon(Icons.arrow_back_ios)),
+      appBar: const PreferredSize(
+        preferredSize: Size.fromHeight(60),
+        child: BasicAppbar(title: "Consultation"),
       ),
       body: Padding(
         padding:
@@ -120,7 +111,7 @@ class _DetailExpertPageState extends State<DetailExpertPage> {
                   MainButtonWidget(
                     title: "Get Appointment",
                     onPressed: () {
-                      Navigator.pushNamed(context, '/payment');
+                      Navigator.pushNamed(context, '/paymentmethod');
                     },
                     isEnabled: buttonEnabled,
                   ),
