@@ -1,6 +1,6 @@
+import 'package:buddy_blues/screens/conselling/widget/list_expert.dart';
 import 'package:buddy_blues/screens/history/widget/mood_history_widget.dart';
 import 'package:buddy_blues/theme/theme_colorstyle.dart';
-import 'package:buddy_blues/theme/theme_textstyle.dart';
 import 'package:buddy_blues/widget/basic_appbar.dart';
 import 'package:buddy_blues/widget/list_todolist.dart';
 import 'package:flutter/material.dart';
@@ -10,8 +10,11 @@ class HistoryPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final int indexTapbar =
+        ModalRoute.of(context)!.settings.arguments as int;
+
     return DefaultTabController(
-      initialIndex: 0,
+      initialIndex: indexTapbar,
       length: 3,
       child: Scaffold(
           appBar: const PreferredSize(
@@ -67,7 +70,34 @@ class HistoryPage extends StatelessWidget {
                             ),
                           ],
                         ),
-                        const Text("Halo "),
+                        ListView(
+                          children: [
+                            ListtExpertWidget(
+                              btnTitle: "Confirming",
+                              btnColor: ThemeColor().green,
+                            ),
+                            const SizedBox(height: 10),
+                            ListtExpertWidget(
+                              btnTitle: "Confirming",
+                              btnColor: ThemeColor().green,
+                            ),
+                            const SizedBox(height: 10),
+                            ListtExpertWidget(
+                              btnTitle: "Bookded",
+                              btnColor: ThemeColor().bluePrimary200,
+                            ),
+                            const SizedBox(height: 10),
+                            ListtExpertWidget(
+                              btnTitle: "Bookded",
+                              btnColor: ThemeColor().bluePrimary200,
+                            ),
+                            const SizedBox(height: 10),
+                            ListtExpertWidget(
+                              btnTitle: "Bookded",
+                              btnColor: ThemeColor().bluePrimary200,
+                            ),
+                          ],
+                        )
                       ],
                     ),
                   ),

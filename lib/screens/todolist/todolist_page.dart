@@ -1,5 +1,4 @@
 import 'package:buddy_blues/theme/theme_colorstyle.dart';
-import 'package:buddy_blues/theme/theme_textstyle.dart';
 import 'package:buddy_blues/widget/basic_appbar.dart';
 import 'package:buddy_blues/widget/list_todolist.dart';
 import 'package:flutter/material.dart';

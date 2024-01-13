@@ -1,6 +1,5 @@
 import 'package:buddy_blues/screens/conselling/widget/list_expert.dart';
 import 'package:buddy_blues/theme/theme_colorstyle.dart';
-import 'package:buddy_blues/theme/theme_textstyle.dart';
 import 'package:buddy_blues/widget/buddyblues_appbar.dart';
 import 'package:buddy_blues/widget/search_bar_widget.dart';
 import 'package:flutter/material.dart';
@@ -15,23 +14,25 @@ class ConsellingPage extends StatelessWidget {
         preferredSize: Size.fromHeight(60),
         child: BuddyBluesAppBar(),
       ),
-      body: Column(
-        children: [
-          const Padding(
-            padding: EdgeInsets.all(20),
-            child: SearchBarWidget(),
-          ),
-          Expanded(
-            child: ListView.builder(
-                itemCount: 5,
-                itemBuilder: (context, index) {
-                  return const Padding(
-                    padding: EdgeInsets.only(bottom: 10),
-                    child: ListtExpertWidget(),
-                  );
-                }),
-          )
-        ],
+      body: Padding(
+        padding: const EdgeInsets.all(20),
+        child: Column(
+          children: [
+            const SearchBarWidget(),
+            Expanded(
+              child: ListView.builder(
+                  itemCount: 5,
+                  itemBuilder: (context, index) {
+                    return Padding(
+                      padding: const EdgeInsets.only(bottom: 10),
+                      child: ListtExpertWidget(
+                        btnTitle: 'See Detail', btnColor: ThemeColor().bluePrimary200,
+                      ),
+                    );
+                  }),
+            )
+          ],
+        ),
       ),
     );
   }

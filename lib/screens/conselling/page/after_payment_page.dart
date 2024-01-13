@@ -14,7 +14,7 @@ class _AfterPaymentPageState extends State<AfterPaymentPage> {
   void initState() {
     super.initState();
     Timer(const Duration(seconds: 2), () {
-      Navigator.pushNamed(context, '/history');
+      Navigator.pushNamed(context, '/history', arguments: 2);
     });
   }
 

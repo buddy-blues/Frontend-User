@@ -1,6 +1,4 @@
 import 'package:buddy_blues/screens/module/widget/list_modul_widget.dart';
-import 'package:buddy_blues/theme/theme_colorstyle.dart';
-import 'package:buddy_blues/theme/theme_textstyle.dart';
 import 'package:buddy_blues/widget/basic_appbar.dart';
 import 'package:flutter/material.dart';
 

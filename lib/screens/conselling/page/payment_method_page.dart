@@ -1,7 +1,5 @@
 import 'package:buddy_blues/screens/conselling/widget/payment_detail_cost.dart';
 import 'package:buddy_blues/screens/conselling/widget/payment_detail_expert.dart';
-import 'package:buddy_blues/theme/theme_colorstyle.dart';
-import 'package:buddy_blues/theme/theme_textstyle.dart';
 import 'package:buddy_blues/widget/basic_appbar.dart';
 import 'package:buddy_blues/widget/main_button.dart';
 import 'package:flutter/material.dart';

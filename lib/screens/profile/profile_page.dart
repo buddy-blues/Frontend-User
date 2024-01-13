@@ -36,20 +36,30 @@ class _ProfilePageState extends State<ProfilePage> {
               ),
               const SizedBox(height: 33),
               const TextfieldWidget(
-                title: "Name", labelTextField: '', isEnabled: true,
+                title: "Name",
+                labelTextField: 'Sri Ratna',
+                isEnabled: true,
               ),
               const SizedBox(height: 24),
               const TextfieldWidget(
-                title: "Email", labelTextField: '', isEnabled: true,
+                title: "Email",
+                labelTextField: 'sriratna@gmail.com',
+                isEnabled: true,
               ),
               const SizedBox(height: 24),
-              MainButtonWidget(title: "Edit Profile", onPressed: () {}, isEnabled: true,),
+              MainButtonWidget(
+                title: "Edit Profile",
+                onPressed: () {},
+                isEnabled: true,
+              ),
               const SizedBox(height: 24),
               MainButtonWidget(
-                  title: "See History",
-                  onPressed: () {
-                    Navigator.pushNamed(context, '/history');
-                  }, isEnabled: true,)
+                title: "See History",
+                onPressed: () {
+                  Navigator.pushNamed(context, '/history');
+                },
+                isEnabled: true,
+              )
             ],
           ),
         ),
