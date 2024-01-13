@@ -65,28 +65,36 @@ class _LoginPageState extends State<LoginPage> {
                 ),
                 child: Padding(
                   padding: const EdgeInsets.only(top: 49, left: 36, right: 34),
-                  child: Column(
-                    children: [
-                      const TextfieldWidget(title: 'Email', labelTextField: '', isEnabled: true,),
-                      const SizedBox(height: 26),
-                      PasswordTextfieldWidget(
-                        title: 'Password',
-                        icon: Icons.remove_red_eye,
-                        onPressed: () {
-                          setState(() {
-                            isHide = !isHide;
-                          });
-                        },
-                        isHidden: isHide,
-                      ),
-                      const SizedBox(height: 36),
-                      MainButtonWidget(
+                  child: SingleChildScrollView(
+                    child: Column(
+                      children: [
+                        const TextfieldWidget(
+                          title: 'Email',
+                          labelTextField: '',
+                          isEnabled: true,
+                        ),
+                        const SizedBox(height: 26),
+                        PasswordTextfieldWidget(
+                          title: 'Password',
+                          icon: Icons.remove_red_eye,
+                          onPressed: () {
+                            setState(() {
+                              isHide = !isHide;
+                            });
+                          },
+                          isHidden: isHide,
+                        ),
+                        const SizedBox(height: 36),
+                        MainButtonWidget(
                           title: 'Login',
                           onPressed: () {
                             Navigator.pushNamedAndRemoveUntil(
                                 context, '/dashboard', (route) => false);
-                          }, isEnabled: true,)
-                    ],
+                          },
+                          isEnabled: true,
+                        )
+                      ],
+                    ),
                   ),
                 ),
               ),

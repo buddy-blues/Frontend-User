@@ -34,97 +34,99 @@ class _AddTodolistPageState extends State<AddTodolistPage> {
       ),
       body: Padding(
         padding: const EdgeInsets.all(20),
-        child: Column(
-          children: [
-            const TextfieldWidget(
-              title: "Thing you have to do",
-              labelTextField: '',
-              isEnabled: true,
-            ),
-            const SizedBox(height: 20),
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  "When?",
-                  style:
-                      ThemeText().robotoRegular.copyWith(color: Colors.black),
-                ),
-                const SizedBox(height: 8),
-                TextField(
-                  controller: dateController,
-                  decoration: InputDecoration(
-                    suffixIcon: IconButton(
-                      onPressed: () async {
-                        final selectDate = await showDatePicker(
-                          context: context,
-                          initialDate: currentDate,
-                          firstDate: DateTime(1990),
-                          lastDate: DateTime(2050),
-                        );
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              const TextfieldWidget(
+                title: "Thing you have to do",
+                labelTextField: '',
+                isEnabled: true,
+              ),
+              const SizedBox(height: 20),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    "When?",
+                    style:
+                        ThemeText().robotoRegular.copyWith(color: Colors.black),
+                  ),
+                  const SizedBox(height: 8),
+                  TextField(
+                    controller: dateController,
+                    decoration: InputDecoration(
+                      suffixIcon: IconButton(
+                        onPressed: () async {
+                          final selectDate = await showDatePicker(
+                            context: context,
+                            initialDate: currentDate,
+                            firstDate: DateTime(1990),
+                            lastDate: DateTime(2050),
+                          );
 
-                        if (selectDate != null) {
-                          dueDate = selectDate;
-                          currentDate = selectDate;
-                          setState(() {
-                            selectedDate =
-                                ParsingDateFormat().dateFormat(dueDate);
-                            dateController.text = selectedDate;
-                          });
-                        }
-                      },
-                      icon: const Icon(Icons.date_range),
-                    ),
-                    border: const OutlineInputBorder(
-                      borderSide: BorderSide(color: Colors.black),
-                      borderRadius: BorderRadius.all(Radius.circular(8)),
-                    ),
-                  ),
-                ),
-              ],
-            ),
-            const SizedBox(height: 20),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Expanded(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        "From",
-                        style: ThemeText()
-                            .robotoRegular
-                            .copyWith(color: Colors.black),
+                          if (selectDate != null) {
+                            dueDate = selectDate;
+                            currentDate = selectDate;
+                            setState(() {
+                              selectedDate =
+                                  ParsingDateFormat().dateFormat(dueDate);
+                              dateController.text = selectedDate;
+                            });
+                          }
+                        },
+                        icon: const Icon(Icons.date_range),
                       ),
-                      const TimePickerWidget(),
-                    ],
-                  ),
-                ),
-                const SizedBox(width: 20),
-                Expanded(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        "To",
-                        style: ThemeText()
-                            .robotoRegular
-                            .copyWith(color: Colors.black),
+                      border: const OutlineInputBorder(
+                        borderSide: BorderSide(color: Colors.black),
+                        borderRadius: BorderRadius.all(Radius.circular(8)),
                       ),
-                      const TimePickerWidget(),
-                    ],
+                    ),
                   ),
-                ),
-              ],
-            ),
-            const SizedBox(height: 40),
-            MainButtonWidget(
-              title: "Submit",
-              onPressed: () {},
-              isEnabled: true,
-            )
-          ],
+                ],
+              ),
+              const SizedBox(height: 20),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          "From",
+                          style: ThemeText()
+                              .robotoRegular
+                              .copyWith(color: Colors.black),
+                        ),
+                        const TimePickerWidget(),
+                      ],
+                    ),
+                  ),
+                  const SizedBox(width: 20),
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          "To",
+                          style: ThemeText()
+                              .robotoRegular
+                              .copyWith(color: Colors.black),
+                        ),
+                        const TimePickerWidget(),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+              const SizedBox(height: 40),
+              MainButtonWidget(
+                title: "Submit",
+                onPressed: () {},
+                isEnabled: true,
+              )
+            ],
+          ),
         ),
       ),
     );

@@ -10,8 +10,7 @@ class HistoryPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final int indexTapbar =
-        ModalRoute.of(context)!.settings.arguments as int;
+    final int indexTapbar = ModalRoute.of(context)!.settings.arguments as int;
 
     return DefaultTabController(
       initialIndex: indexTapbar,

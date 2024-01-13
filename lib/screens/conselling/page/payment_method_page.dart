@@ -28,46 +28,50 @@ class _PaymentPageState extends State<PaymentMethodPage> {
       ),
       body: Stack(
         children: [
-          Column(
+          ListView(
             children: [
-              Padding(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 16, vertical: 20),
-                child: Column(
-                  children: [
-                    const PaymentDetailExpert(),
-                    const SizedBox(height: 20),
-                    const PaymentDetailCost(),
-                    const SizedBox(height: 20),
-                    DropdownMenu(
-                      inputDecorationTheme: InputDecorationTheme(
-                        border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(20),
+              Column(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 16, vertical: 20),
+                    child: Column(
+                      children: [
+                        const PaymentDetailExpert(),
+                        const SizedBox(height: 20),
+                        const PaymentDetailCost(),
+                        const SizedBox(height: 20),
+                        DropdownMenu(
+                          inputDecorationTheme: InputDecorationTheme(
+                            border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(20),
+                            ),
+                          ),
+                          width: 385,
+                          hintText: "Payment Method",
+                          onSelected: (value) {
+                            setState(() {
+                              buttonEnabled = true;
+                            });
+                          },
+                          dropdownMenuEntries: list
+                              .map<DropdownMenuEntry<String>>((String value) {
+                            return DropdownMenuEntry<String>(
+                                value: value, label: value);
+                          }).toList(),
                         ),
-                      ),
-                      width: 385,
-                      hintText: "Payment Method",
-                      onSelected: (value) {
-                        setState(() {
-                          buttonEnabled = true;
-                        });
-                      },
-                      dropdownMenuEntries:
-                          list.map<DropdownMenuEntry<String>>((String value) {
-                        return DropdownMenuEntry<String>(
-                            value: value, label: value);
-                      }).toList(),
+                        const SizedBox(height: 24),
+                        MainButtonWidget(
+                          title: "Get Appointment",
+                          onPressed: () {
+                            Navigator.pushNamed(context, '/confirmpayment');
+                          },
+                          isEnabled: buttonEnabled,
+                        ),
+                      ],
                     ),
-                    const SizedBox(height: 24),
-                    MainButtonWidget(
-                      title: "Get Appointment",
-                      onPressed: () {
-                        Navigator.pushNamed(context, '/confirmpayment');
-                      },
-                      isEnabled: buttonEnabled,
-                    ),
-                  ],
-                ),
+                  ),
+                ],
               ),
             ],
           ),

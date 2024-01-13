@@ -1,8 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
     <application
-        android:label="buddy_blues"
+        android:label="Buddy Blues"
         android:name="${applicationName}"
-        android:icon="@mipmap/ic_launcher">
+        android:icon="@mipmap/buddyblues_logo">
         <activity
             android:name=".MainActivity"
             android:exported="true"

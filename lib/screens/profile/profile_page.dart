@@ -56,7 +56,7 @@ class _ProfilePageState extends State<ProfilePage> {
               MainButtonWidget(
                 title: "See History",
                 onPressed: () {
-                  Navigator.pushNamed(context, '/history');
+                  Navigator.pushNamed(context, '/history', arguments: 0);
                 },
                 isEnabled: true,
               )

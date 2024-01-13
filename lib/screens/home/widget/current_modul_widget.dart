@@ -10,7 +10,7 @@ class CurrentModuleWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      height: 250,
+      padding: const EdgeInsets.only(bottom: 10),
       decoration: BoxDecoration(
         border: Border.all(color: ThemeColor().grey2),
         borderRadius: BorderRadius.circular(10),
@@ -48,7 +48,7 @@ class CurrentModuleWidget extends StatelessWidget {
                   const SizedBox(height: 16),
                   LinearPercentIndicator(
                     barRadius: const Radius.circular(30),
-                    width: 330,
+                    width: MediaQuery.of(context).size.width - 60,
                     lineHeight: 20,
                     percent: 0.5,
                     backgroundColor: ThemeColor().secondary100,

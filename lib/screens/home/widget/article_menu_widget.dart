@@ -35,8 +35,8 @@ class CardArticleWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      padding: const EdgeInsets.only(bottom: 10),
       width: (MediaQuery.of(context).size.width - 60) / 2,
-      height: 148,
       decoration: BoxDecoration(
         border: Border.all(color: ThemeColor().grey2),
         borderRadius: BorderRadius.circular(10),

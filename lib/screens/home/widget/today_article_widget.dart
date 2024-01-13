@@ -8,8 +8,7 @@ class TodayArticleWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.only(top: 17, left: 17, right: 17),
-      height: 90,
+      padding: const EdgeInsets.all(17),
       width: double.infinity,
       decoration: BoxDecoration(
           color: ThemeColor().bluePrimary50,

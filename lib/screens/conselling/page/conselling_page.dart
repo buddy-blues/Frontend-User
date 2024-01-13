@@ -19,6 +19,7 @@ class ConsellingPage extends StatelessWidget {
         child: Column(
           children: [
             const SearchBarWidget(),
+            const SizedBox(height: 20),
             Expanded(
               child: ListView.builder(
                   itemCount: 5,
@@ -26,7 +27,8 @@ class ConsellingPage extends StatelessWidget {
                     return Padding(
                       padding: const EdgeInsets.only(bottom: 10),
                       child: ListtExpertWidget(
-                        btnTitle: 'See Detail', btnColor: ThemeColor().bluePrimary200,
+                        btnTitle: 'See Detail',
+                        btnColor: ThemeColor().bluePrimary200,
                       ),
                     );
                   }),

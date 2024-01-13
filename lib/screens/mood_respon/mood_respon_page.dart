@@ -31,20 +31,24 @@ class MoodResponPage extends StatelessWidget {
     return Scaffold(
       body: Padding(
         padding: const EdgeInsets.only(left: 39, right: 39, top: 82),
-        child: Column(
+        child: ListView(
           children: [
-            Text(
-              "Thank you for telling us!",
-              style: ThemeText().robotoBold24,
+            Column(
+              children: [
+                Text(
+                  "Thank you for telling us!",
+                  style: ThemeText().robotoBold24,
+                ),
+                const SizedBox(height: 40),
+                Image.asset("assets/images/mood_logo.png"),
+                const SizedBox(height: 40),
+                Text(
+                  moodRespon,
+                  style: ThemeText().robotoMedium20,
+                  textAlign: TextAlign.center,
+                )
+              ],
             ),
-            const SizedBox(height: 40),
-            Image.asset("assets/images/mood_logo.png"),
-            const SizedBox(height: 40),
-            Text(
-              moodRespon,
-              style: ThemeText().robotoMedium20,
-              textAlign: TextAlign.center,
-            )
           ],
         ),
       ),

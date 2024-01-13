@@ -16,39 +16,43 @@ class PostForumPage extends StatelessWidget {
       ),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 21, vertical: 28),
-        child: Column(
-          children: [
-            ListTile(
-              title: Text(
-                "Sri Ratna",
-                style: ThemeText().robotoMedium,
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              ListTile(
+                title: Text(
+                  "Sri Ratna",
+                  style: ThemeText().robotoMedium,
+                ),
+                leading: const CircleAvatar(
+                  radius: 25,
+                  backgroundImage: NetworkImage(
+                      "https://i.pinimg.com/originals/60/e0/3b/60e03b25d0829ec560b3f472e84cd23a.jpg"),
+                ),
               ),
-              leading: const CircleAvatar(
-                radius: 25,
-                backgroundImage: NetworkImage(
-                    "https://i.pinimg.com/originals/60/e0/3b/60e03b25d0829ec560b3f472e84cd23a.jpg"),
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.symmetric(vertical: 20),
-              child: TextField(
-                maxLines: 6,
-                decoration: InputDecoration(
-                  hintText: "What's Happened?",
-                  hintStyle: TextStyle(color: ThemeColor().grey2),
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(8),
-                    borderSide: const BorderSide(color: Colors.black),
+              Padding(
+                padding: const EdgeInsets.symmetric(vertical: 20),
+                child: SingleChildScrollView(
+                  child: TextField(
+                    maxLines: 6,
+                    decoration: InputDecoration(
+                      hintText: "What's Happened?",
+                      hintStyle: TextStyle(color: ThemeColor().grey2),
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(8),
+                        borderSide: const BorderSide(color: Colors.black),
+                      ),
+                    ),
                   ),
                 ),
               ),
-            ),
-            MainButtonWidget(
-              title: "Post",
-              onPressed: () {},
-              isEnabled: true,
-            )
-          ],
+              MainButtonWidget(
+                title: "Post",
+                onPressed: () {},
+                isEnabled: true,
+              )
+            ],
+          ),
         ),
       ),
     );

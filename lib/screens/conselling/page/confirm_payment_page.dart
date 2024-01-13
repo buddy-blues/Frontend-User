@@ -16,75 +16,73 @@ class ConfirmPaymentPage extends StatelessWidget {
         child: BasicAppbar(title: "Consultation"),
       ),
       body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 20),
-        child: ListView(
-          children: [
-            Column(
-              children: [
-                const PaymentDetailExpert(),
-                const SizedBox(height: 24),
-                const PaymentDetailCost(),
-                const SizedBox(height: 24),
-                const TextField(
-                  decoration: InputDecoration(
-                    enabled: false,
-                    contentPadding: EdgeInsets.all(10),
-                    labelText: "BCA",
-                    border: OutlineInputBorder(
-                        borderSide: BorderSide(color: Colors.black),
-                        borderRadius: BorderRadius.all(Radius.circular(8))),
-                  ),
+        padding: const EdgeInsets.all(20),
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              const PaymentDetailExpert(),
+              const SizedBox(height: 24),
+              const PaymentDetailCost(),
+              const SizedBox(height: 24),
+              const TextField(
+                decoration: InputDecoration(
+                  enabled: false,
+                  contentPadding: EdgeInsets.all(10),
+                  labelText: "BCA",
+                  border: OutlineInputBorder(
+                      borderSide: BorderSide(color: Colors.black),
+                      borderRadius: BorderRadius.all(Radius.circular(8))),
                 ),
-                const SizedBox(height: 16),
-                const TextfieldWidget(
-                  title: "Name on Card",
-                  labelTextField: 'Sri Ratna',
-                  isEnabled: false,
-                ),
-                const SizedBox(height: 16),
-                const TextfieldWidget(
-                  title: "Card Number*",
-                  labelTextField: "xxxx xxxx xxxx xxxx",
-                  isEnabled: false,
-                ),
-                const SizedBox(height: 16),
-                const Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Expanded(
-                      child: TextfieldWidget(
-                        title: "Expiry Date*",
-                        labelTextField: "MM/YY",
-                        isEnabled: false,
-                      ),
+              ),
+              const SizedBox(height: 16),
+              const TextfieldWidget(
+                title: "Name on Card",
+                labelTextField: 'Sri Ratna',
+                isEnabled: false,
+              ),
+              const SizedBox(height: 16),
+              const TextfieldWidget(
+                title: "Card Number*",
+                labelTextField: "xxxx xxxx xxxx xxxx",
+                isEnabled: false,
+              ),
+              const SizedBox(height: 16),
+              const Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Expanded(
+                    child: TextfieldWidget(
+                      title: "Expiry Date*",
+                      labelTextField: "MM/YY",
+                      isEnabled: false,
                     ),
-                    SizedBox(width: 20),
-                    Expanded(
-                      child: TextfieldWidget(
-                        title: "Security Code*",
-                        labelTextField: "xxx",
-                        isEnabled: false,
-                      ),
-                    )
-                  ],
-                ),
-                const SizedBox(height: 16),
-                const TextfieldWidget(
-                  title: "ZIP/Postal Code",
-                  labelTextField: "xxxxx",
-                  isEnabled: false,
-                ),
-                const SizedBox(height: 24),
-                MainButtonWidget(
-                  title: "Confirm Payment",
-                  onPressed: () {
-                    Navigator.pushNamed(context, "/payment");
-                  },
-                  isEnabled: true,
-                )
-              ],
-            )
-          ],
+                  ),
+                  SizedBox(width: 20),
+                  Expanded(
+                    child: TextfieldWidget(
+                      title: "Security Code*",
+                      labelTextField: "xxx",
+                      isEnabled: false,
+                    ),
+                  )
+                ],
+              ),
+              const SizedBox(height: 16),
+              const TextfieldWidget(
+                title: "ZIP/Postal Code",
+                labelTextField: "xxxxx",
+                isEnabled: false,
+              ),
+              const SizedBox(height: 24),
+              MainButtonWidget(
+                title: "Confirm Payment",
+                onPressed: () {
+                  Navigator.pushNamed(context, "/payment");
+                },
+                isEnabled: true,
+              )
+            ],
+          ),
         ),
       ),
     );

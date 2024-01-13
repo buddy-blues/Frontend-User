@@ -66,40 +66,50 @@ class _RegisterPageState extends State<RegisterPage> {
                 ),
                 child: Padding(
                   padding: const EdgeInsets.only(top: 49, left: 36, right: 34),
-                  child: Column(
-                    children: [
-                      const TextfieldWidget(
-                        title: 'Name', labelTextField: '', isEnabled: true,
-                      ),
-                      const SizedBox(height: 26),
-                      const TextfieldWidget(
-                        title: 'Email', labelTextField: '', isEnabled: true,
-                      ),
-                      const SizedBox(height: 26),
-                      PasswordTextfieldWidget(
-                        title: 'Password',
-                        icon: Icons.remove_red_eye,
-                        onPressed: () {
-                          setState(() {
-                            isHide = !isHide;
-                          });
-                        },
-                        isHidden: isHide,
-                      ),
-                      const SizedBox(height: 26),
-                      PasswordTextfieldWidget(
-                        title: 'Password',
-                        icon: Icons.remove_red_eye,
-                        onPressed: () {
-                          setState(() {
-                            isHide = !isHide;
-                          });
-                        },
-                        isHidden: isHide,
-                      ),
-                      const SizedBox(height: 36),
-                      MainButtonWidget(title: 'Register', onPressed: () {}, isEnabled: true,)
-                    ],
+                  child: SingleChildScrollView(
+                    child: Column(
+                      children: [
+                        const TextfieldWidget(
+                          title: 'Name',
+                          labelTextField: '',
+                          isEnabled: true,
+                        ),
+                        const SizedBox(height: 26),
+                        const TextfieldWidget(
+                          title: 'Email',
+                          labelTextField: '',
+                          isEnabled: true,
+                        ),
+                        const SizedBox(height: 26),
+                        PasswordTextfieldWidget(
+                          title: 'Password',
+                          icon: Icons.remove_red_eye,
+                          onPressed: () {
+                            setState(() {
+                              isHide = !isHide;
+                            });
+                          },
+                          isHidden: isHide,
+                        ),
+                        const SizedBox(height: 26),
+                        PasswordTextfieldWidget(
+                          title: 'Password',
+                          icon: Icons.remove_red_eye,
+                          onPressed: () {
+                            setState(() {
+                              isHide = !isHide;
+                            });
+                          },
+                          isHidden: isHide,
+                        ),
+                        const SizedBox(height: 36),
+                        MainButtonWidget(
+                          title: 'Register',
+                          onPressed: () {},
+                          isEnabled: true,
+                        )
+                      ],
+                    ),
                   ),
                 ),
               ),
