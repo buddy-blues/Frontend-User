@@ -20,6 +20,7 @@ class ListArticleWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
     return Column(
       children: [
         GestureDetector(
@@ -45,7 +46,7 @@ class ListArticleWidget extends StatelessWidget {
                   child: SizedBox(
                     width: 80,
                     height: 80,
-                    child: Image.asset(
+                    child: Image.network(
                       image,
                       fit: BoxFit.cover,
                     ),

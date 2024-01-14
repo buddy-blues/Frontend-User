@@ -1,4 +1,5 @@
 import 'package:buddy_blues/screens/article/page/article_page.dart';
+import 'package:buddy_blues/screens/article/page/webview_page.dart';
 import 'package:buddy_blues/screens/chatBot/page/chatBot_page.dart';
 import 'package:buddy_blues/screens/conselling/page/after_payment_page.dart';
 import 'package:buddy_blues/screens/conselling/page/confirm_payment_page.dart';
@@ -50,6 +51,7 @@ class MyApp extends StatelessWidget {
         '/chatbot': (context) => const ChatbotPage(),
         '/dashboard': (context) => const DashboardPage(),
         '/article': (context) => const ArticlePage(),
+        '/webpage': (context) => WebViewApp(link: ModalRoute.of(context)?.settings.arguments as String),
         '/listModule': (context) => const ListModulePage(),
         '/detailModule': (context) => const DetailModulePage(),
         '/moodRespon': (context) => const MoodResponPage(),
