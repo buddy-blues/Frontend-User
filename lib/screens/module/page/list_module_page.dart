@@ -7,7 +7,7 @@ class ListModulePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final String moduleTitle =
+    final String moduleType =
         ModalRoute.of(context)!.settings.arguments as String;
 
     List<Map<String, dynamic>> pregnancyModule = [
@@ -33,7 +33,7 @@ class ListModulePage extends StatelessWidget {
     return Scaffold(
       appBar: PreferredSize(
         preferredSize: const Size.fromHeight(60),
-        child: BasicAppbar(title: moduleTitle),
+        child: BasicAppbar(title: moduleType),
       ),
       body: Padding(
         padding: const EdgeInsets.all(20),
