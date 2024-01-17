@@ -40,17 +40,25 @@ class _ModulePageState extends State<ModulePage> {
                     return const Center(
                       child: CircularProgressIndicator(),
                     );
-                  } else if (value.moduleData.isNotEmpty) {
+                  } else if (value.loading) {
+                    return const Center(
+                      child: CircularProgressIndicator(),
+                    );
+                  } else if (value.moduleClassification.isNotEmpty) {
                     return ListView.builder(
-                      itemCount: value.moduleData.length,
+                      itemCount: value.moduleClassification.length,
                       itemBuilder: (context, index) {
                         return ListModuleWidget(
-                          title: value.moduleData[index]["title"],
-                          desc: value.moduleData[index]["desc"],
-                          image: value.moduleData[index]["image"],
+                          title: value.moduleClassification[index]["title"],
+                          desc: value.moduleClassification[index]["desc"],
+                          image: value.moduleClassification[index]["image"],
                           onTap: () {
+                            Provider.of<ModuleProvider>(context, listen: false)
+                                .getModuleByType(
+                                    value.moduleClassification[index]["type"]);
                             Navigator.pushNamed(context, "/listModule",
-                                arguments: value.moduleData[index]["title"]);
+                                arguments: value.moduleClassification[index]
+                                    ["title"]);
                           },
                         );
                       },
