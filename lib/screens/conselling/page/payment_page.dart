@@ -14,69 +14,77 @@ class PaymentPage extends StatelessWidget {
         preferredSize: Size.fromHeight(60),
         child: BasicAppbar(title: "Consultation"),
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(20),
-        child: Stack(
-          children: [
-            Column(
+      body: Stack(
+        children: [
+          Padding(
+            padding: const EdgeInsets.only(
+                top: 20, right: 20, left: 20, bottom: 100),
+            child: ListView(
               children: [
-                Container(
-                  padding: const EdgeInsets.only(
-                      top: 14, left: 20, right: 20, bottom: 30),
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(20),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.black.withOpacity(0.1),
-                        spreadRadius: 1,
-                        blurRadius: 10,
-                        offset: const Offset(0, 4),
+                Column(
+                  children: [
+                    Container(
+                      padding: const EdgeInsets.only(
+                          top: 14, left: 20, right: 20, bottom: 30),
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(20),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.black.withOpacity(0.1),
+                            spreadRadius: 1,
+                            blurRadius: 10,
+                            offset: const Offset(0, 4),
+                          ),
+                        ],
                       ),
-                    ],
-                  ),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      const ContentDetailExpert(),
-                      const SizedBox(height: 24),
-                      const Divider(),
-                      const Text("Doctor's Contact"),
-                      const SizedBox(height: 10),
-                      SizedBox(
-                        height: 40,
-                        child: MainButtonWidget(
-                          title: "WhatsApp",
-                          onPressed: () {},
-                          isEnabled: true,
-                        ),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          const ContentDetailExpert(),
+                          const SizedBox(height: 24),
+                          const Divider(),
+                          const Text("Doctor's Contact"),
+                          const SizedBox(height: 10),
+                          SizedBox(
+                            height: 40,
+                            child: MainButtonWidget(
+                              title: "WhatsApp",
+                              onPressed: () {},
+                              isEnabled: true,
+                            ),
+                          ),
+                          const SizedBox(height: 10),
+                          SizedBox(
+                            height: 40,
+                            child: MainButtonWidget(
+                              title: "Telephone Number",
+                              onPressed: () {},
+                              isEnabled: true,
+                            ),
+                          ),
+                          const SizedBox(height: 10),
+                          SizedBox(
+                            height: 40,
+                            child: MainButtonWidget(
+                              title: "Email",
+                              onPressed: () {},
+                              isEnabled: true,
+                            ),
+                          ),
+                        ],
                       ),
-                      const SizedBox(height: 10),
-                      SizedBox(
-                        height: 40,
-                        child: MainButtonWidget(
-                          title: "Telephone Number",
-                          onPressed: () {},
-                          isEnabled: true,
-                        ),
-                      ),
-                      const SizedBox(height: 10),
-                      SizedBox(
-                        height: 40,
-                        child: MainButtonWidget(
-                          title: "Email",
-                          onPressed: () {},
-                          isEnabled: true,
-                        ),
-                      ),
-                    ],
-                  ),
+                    ),
+                    const SizedBox(height: 24),
+                    const PaymentDetailCost()
+                  ],
                 ),
-                const SizedBox(height: 24),
-                const PaymentDetailCost()
               ],
             ),
-            Align(
+          ),
+          Padding(
+            padding: const EdgeInsets.all(20),
+            child: Align(
               alignment: Alignment.bottomCenter,
               child: MainButtonWidget(
                 title: "Pay",
@@ -85,9 +93,9 @@ class PaymentPage extends StatelessWidget {
                 },
                 isEnabled: true,
               ),
-            )
-          ],
-        ),
+            ),
+          )
+        ],
       ),
     );
   }

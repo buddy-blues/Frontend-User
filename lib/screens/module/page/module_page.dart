@@ -16,8 +16,12 @@ class _ModulePageState extends State<ModulePage> {
   @override
   void initState() {
     super.initState();
-    Provider.of<ModuleProvider>(context, listen: false)
-        .getModuleClassification();
+    // Provider.of<ModuleProvider>(context, listen: false)
+    //     .getModuleClassification();
+    Future.delayed(Duration.zero, () {
+      Provider.of<ModuleProvider>(context, listen: false)
+          .getModuleClassification();
+    });
   }
 
   @override
