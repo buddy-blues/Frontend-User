@@ -44,7 +44,7 @@ class ListModuleWidget extends StatelessWidget {
                   child: SizedBox(
                     width: 72.96,
                     height: 80,
-                    child: Image.asset(
+                    child: Image.network(
                       image,
                       fit: BoxFit.cover,
                     ),

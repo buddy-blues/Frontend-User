@@ -25,12 +25,12 @@ class _DetailExpertPageState extends State<DetailExpertPage> {
         preferredSize: Size.fromHeight(60),
         child: BasicAppbar(title: "Consultation"),
       ),
-      body: Padding(
-        padding:
-            const EdgeInsets.only(top: 47, left: 40, right: 40, bottom: 20),
-        child: Stack(
-          children: [
-            ListView(
+      body: Stack(
+        children: [
+          Padding(
+            padding: const EdgeInsets.only(
+                top: 47, left: 40, right: 40, bottom: 110),
+            child: ListView(
               children: [
                 Column(
                   children: [
@@ -70,7 +70,7 @@ class _DetailExpertPageState extends State<DetailExpertPage> {
                     ),
                     const SizedBox(height: 30),
                     DropdownMenu(
-                      width: 350,
+                      width: MediaQuery.sizeOf(context).width - 80,
                       hintText: "Available Dates",
                       onSelected: (value) {
                         setState(() {
@@ -87,7 +87,10 @@ class _DetailExpertPageState extends State<DetailExpertPage> {
                 )
               ],
             ),
-            Align(
+          ),
+          Padding(
+            padding: const EdgeInsets.only(left: 40, right: 40, bottom: 20),
+            child: Align(
               alignment: Alignment.bottomCenter,
               child: Column(
                 mainAxisSize: MainAxisSize.min,
@@ -116,9 +119,9 @@ class _DetailExpertPageState extends State<DetailExpertPage> {
                   ),
                 ],
               ),
-            )
-          ],
-        ),
+            ),
+          )
+        ],
       ),
     );
   }

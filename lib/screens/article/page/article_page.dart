@@ -1,4 +1,4 @@
-import 'package:buddy_blues/model/article_provider.dart';
+import 'package:buddy_blues/provider/article_provider.dart';
 import 'package:buddy_blues/screens/article/widget/list_article_widget.dart';
 import 'package:buddy_blues/widget/basic_appbar.dart';
 import 'package:flutter/material.dart';

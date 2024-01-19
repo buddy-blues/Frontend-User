@@ -1,3 +1,5 @@
+import 'package:buddy_blues/firebase_options.dart';
+import 'package:buddy_blues/provider/module_provider.dart';
 import 'package:buddy_blues/screens/article/page/article_page.dart';
 import 'package:buddy_blues/screens/article/page/webview_page.dart';
 import 'package:buddy_blues/screens/chatBot/page/chatBot_page.dart';
@@ -22,10 +24,22 @@ import 'package:buddy_blues/screens/start/start_page.dart';
 import 'package:buddy_blues/screens/todolist/add_todolist_page.dart';
 import 'package:buddy_blues/screens/todolist/todolist_page.dart';
 import 'package:buddy_blues/theme/theme_colorstyle.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
-void main() {
-  runApp(const MyApp());
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+
+  runApp(MultiProvider(
+    providers: [
+      ChangeNotifierProvider(create: (_) => ModuleProvider()),
+    ],
+    child: const MyApp(),
+  ));
 }
 
 class MyApp extends StatelessWidget {
@@ -51,7 +65,8 @@ class MyApp extends StatelessWidget {
         '/chatbot': (context) => const ChatbotPage(),
         '/dashboard': (context) => const DashboardPage(),
         '/article': (context) => const ArticlePage(),
-        '/webpage': (context) => WebViewApp(link: ModalRoute.of(context)?.settings.arguments as String),
+        '/webpage': (context) => WebViewApp(
+            link: ModalRoute.of(context)?.settings.arguments as String),
         '/listModule': (context) => const ListModulePage(),
         '/detailModule': (context) => const DetailModulePage(),
         '/moodRespon': (context) => const MoodResponPage(),

@@ -1,7 +1,7 @@
 import 'package:buddy_blues/model/articles_response.dart';
 import 'package:flutter/cupertino.dart';
 
-import 'apiservice.dart';
+import '../model/apiservice.dart';
 
 enum ResultState { loading, noData, hasData, error }
 

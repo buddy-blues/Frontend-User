@@ -20,7 +20,6 @@ class _TimePickerWidgetState extends State<TimePickerWidget> {
       setState(() {
         _selectedTime = picked;
         timeController.text = _selectedTime.format(context);
-        print("Selected time: $_selectedTime");
       });
     }
   }
